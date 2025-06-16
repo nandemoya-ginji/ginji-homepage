@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>なんでも屋銀時 公式サイト</title>
+    <!-- Tailwind CSS CDNを読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* カスタムフォントの適用 */
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* セクション間の区切り線 */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, #fef3c7, #fde68a, #fef3c7);
+            width: 80%;
+            margin: 4rem auto;
+            border-radius: 9999px;
+        }
+        /* モーダル表示時の背景オーバーレイ */
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99; /* モーダルよりも下に設定 */
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-amber-900 leading-relaxed">
+
+    <!-- ヘッダーとナビゲーション -->
+    <header class="bg-white shadow-lg py-4 fixed w-full z-50 rounded-b-xl">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-extrabold text-amber-800 flex items-center">
+                <img src="https://placehold.co/40x40/fcd34d/78350f?text=銀" alt="なんでも屋銀時ロゴ" class="mr-2 rounded-full">
+                なんでも屋銀時
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ホーム</a>
+                <a href="#greeting" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ご挨拶・理念</a>
+                <a href="#services" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">サービス内容</a>
+                <a href="#pricing" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">料金案内</a>
+                <a href="#faq" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">よくある質問</a>
+                <a href="#contact" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ご依頼・お問い合わせ</a>
+            </div>
+            <!-- モバイルメニューボタン -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-amber-800 hover:bg-amber-100 transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-b-xl shadow-lg pb-4">
+            <a href="#home" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ホーム</a>
+            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ご挨拶・理念</a>
+            <a href="#services" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">サービス内容</a>
+            <a href="#pricing" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
+            <a href="#faq" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">よくある質問</a>
+            <a href="#contact" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ご依頼・お問い合わせ</a>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- ヘッダーの高さ分だけ下にずらす -->
+
+        <!-- ホームセクション (Hero Section) -->
+        <section id="home" class="relative bg-gradient-to-br from-amber-100 to-yellow-100 py-20 md:py-32 overflow-hidden rounded-b-3xl shadow-xl">
+            <div class="absolute inset-0 bg-pattern opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23fcd34d\' fill-opacity=\'0.2\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
+                <div class="text-center md:text-left md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-amber-900">
+                        <span class="block text-amber-700">あなたの心に寄り添う、</span>
+                        なんでも屋銀時
+                    </h1>
+                    <p class="text-xl md:text-2xl text-amber-800 mb-8 max-w-lg mx-auto md:mx-0">
+                        東京・練馬区を拠点に、**「一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになること」**を信条としています。
+                    </p>
+                    <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
+                        まずは気軽に相談する
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <!-- 温かい笑顔の銀時さんのイラストプレースホルダー -->
+                    <img src="https://placehold.co/400x400/fde68a/78350f?text=銀時さん+イラスト" alt="なんでも屋銀時さんイラスト" class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-2xl border-4 border-white object-cover">
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ご挨拶・理念セクション -->
+        <section id="greeting" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-6">
+                        ご挨拶と銀時の理念
+                    </h2>
+                    <p class="text-lg md:text-xl text-amber-800 mb-4">
+                        「なんでも屋銀時」は、東京・練馬区を中心に活動する個人の仕事屋です。
+                        お金儲けを目的とするのではなく、**「一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになること」**を信条としています。
+                    </p>
+                    <p class="text-lg md:text-xl text-amber-800">
+                        企業でも行政でもなく、**“個人だからこそできる信頼関係”**を大切にし、皆様の心に寄り添うサポートを提供しています。ひとりで悩まず、気軽に声をかけてもらえる存在を目指しています。
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <!-- 温かい握手のイラストプレースホルダー -->
+                    <img src="https://placehold.co/450x300/fef3c7/78350f?text=信頼関係+イラスト" alt="信頼関係のイラスト" class="w-full md:w-3/4 lg:w-2/3 rounded-xl shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- サービス内容セクション -->
+        <section id="services" class="py-16 md:py-24 bg-emerald-50 rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    主なサービス内容
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- サービスカード1: お悩み相談・愚痴聞き -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://placehold.co/64x64/dcfce7/065f46?text=会話" alt="お悩み相談・愚痴聞きアイコン" class="w-16 h-16 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">お悩み相談・愚痴聞き</h3>
+                        <p class="text-amber-800">
+                            心の内を誰にも言えずに抱え込んでしまう方へ。オンラインまたは対面で、じっくりお話を伺います。
+                        </p>
+                    </div>
+                    <!-- サービスカード2: 外出・通院などの付き添い -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://placehold.co/64x64/dcfce7/065f46?text=付き添い" alt="外出・通院などの付き添いアイコン" class="w-16 h-16 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">外出・通院などの付き添い</h3>
+                        <p class="text-amber-800">
+                            一人では不安な通院や役所手続き、買い物などの外出に、銀時が付き添います。
+                        </p>
+                    </div>
+                    <!-- サービスカード3: お話相手 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://placehold.co/64x64/dcfce7/065f46?text=対話" alt="お話相手アイコン" class="w-16 h-16 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">お話相手</h3>
+                        <p class="text-amber-800">
+                            話し相手がほしい、ただ誰かと雑談したい、という方にも対応します。高齢者の方からお子様まで、どなたでも。
+                        </p>
+                    </div>
+                    <!-- サービスカード4: 生活のちょっとしたお手伝い -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://placehold.co/64x64/dcfce7/065f46?text=お手伝い" alt="生活のちょっとしたお手伝いアイコン" class="w-16 h-16 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">生活のちょっとしたお手伝い</h3>
+                        <p class="text-amber-800">
+                            室内の片付け、荷物移動、スマホ操作のサポートなど、手が足りない時に軽作業をお手伝いします。
+                        </p>
+                    </div>
+                    <!-- サービスカード5: その他ご相談に応じて柔軟に対応 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://placehold.co/64x64/dcfce7/065f46?text=解決" alt="その他相談アイコン" class="w-16 h-16 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">その他ご相談に応じて柔軟に対応</h3>
+                        <p class="text-amber-800">
+                            内容を問わず、まずはご相談ください。お引き受けできる範囲で誠実に対応します。
+                        </p>
+                    </div>
+                    <!-- サービスカード6: 24時間いつでも予約 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://placehold.co/64x64/dcfce7/065f46?text=24h" alt="24時間予約アイコン" class="w-16 h-16 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">24時間いつでも予約</h3>
+                        <p class="text-amber-800 mb-2">
+                            オンライン通話に限り、24時間いつでもご予約・ご利用いただけます。
+                        </p>
+                        <p class="text-sm text-amber-700 mb-1">
+                            ※夜22時〜朝6時のご利用は **+1,000円の深夜料金**を頂戴します
+                        </p>
+                        <p class="text-sm text-amber-700">
+                            ※当日予約は **開始の2時間前まで**受付
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- 料金案内セクション -->
+        <section id="pricing" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    料金案内
+                </h2>
+                <div class="flex flex-col lg:flex-row justify-center gap-8">
+                    <!-- プランカード1 -->
+                    <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
+                        <h3 class="text-3xl font-bold text-amber-700 mb-4">基本料金</h3>
+                        <p class="text-4xl font-extrabold text-amber-900 mb-6">
+                            ¥3,000<span class="text-lg font-medium text-amber-700"> / 60分 (税込)</span>
+                        </p>
+                        <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 最初の60分</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> どのサービスも共通</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 延長料金は別途</li>
+                        </ul>
+                        <p class="text-amber-800 text-base mt-auto">
+                            ※交通費、実費（施設利用料など）は別途頂戴いたします。
+                        </p>
+                    </div>
+                    <!-- プランカード2 -->
+                    <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
+                        <h3 class="text-3xl font-bold text-amber-700 mb-4">延長料金</h3>
+                        <p class="text-4xl font-extrabold text-amber-900 mb-6">
+                            ¥1,000<span class="text-lg font-medium text-amber-700"> / 30分 (税込)</span>
+                        </p>
+                        <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 60分以降の延長</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 15分単位での調整可能</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 事前にお見積り</li>
+                        </ul>
+                        <p class="text-amber-800 text-base mt-auto">
+                            ※詳細はお問い合わせください。
+                        </p>
+                    </div>
+                </div>
+                <p class="text-lg text-amber-800 mt-12 max-w-2xl mx-auto">
+                    ご依頼内容に応じて柔軟に対応いたしますので、まずは<a href="#contact" class="text-amber-600 hover:underline font-bold">お問い合わせ</a>よりご相談ください。お見積もりを丁寧にご提示いたします。
+                </p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- FAQセクション -->
+        <section id="faq" class="py-16 md:py-24 bg-emerald-50 rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    よくある質問 (FAQ)
+                </h2>
+                <div class="space-y-6 max-w-3xl mx-auto">
+                    <!-- FAQアイテム1 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq1')">
+                            <span class="flex items-center">
+                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                                営業エリアはどこまでですか？
+                            </span>
+                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="faq1" class="hidden mt-4 text-amber-800 text-lg">
+                            <span class="font-bold text-amber-600 mr-2">A.</span>東京23区（特に練馬区・杉並区・中野区）を中心に活動しております。ご相談次第で他地域も対応可能ですので、まずはお気軽にご連絡ください。
+                        </div>
+                    </div>
+                    <!-- FAQアイテム2 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq2')">
+                            <span class="flex items-center">
+                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                                強引な勧誘や営業はありますか？
+                            </span>
+                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="faq2" class="hidden mt-4 text-amber-800 text-lg">
+                            <span class="font-bold text-amber-600 mr-2">A.</span>一切ございません。銀時は、お客様一人ひとりに誠実に向き合い、信頼関係を築くことを最優先としています。ご安心ください。
+                        </div>
+                    </div>
+                    <!-- FAQアイテム3 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq3')">
+                            <span class="flex items-center">
+                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                                「ただ一緒にいるだけ」の依頼も可能ですか？
+                            </span>
+                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="faq3" class="hidden mt-4 text-amber-800 text-lg">
+                            <span class="font-bold text-amber-600 mr-2">A.</span>はい、可能です。レンタルおじさん的な感覚で、ただ傍にいてほしい、話し相手になってほしいといったご依頼も喜んでお受けします。精神的な寄り添いや共感を大切にしています。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ご依頼・お問い合わせセクション -->
+        <section id="contact" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8 mb-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    ご依頼・お問い合わせ
+                </h2>
+                <p class="text-lg md:text-xl text-amber-800 mb-8 max-w-3xl mx-auto">
+                    どんな些細なことでも構いません。ひとりで抱え込まず、まずは銀時にご相談ください。
+                    誠実にお話を伺い、お力になれるよう努めます。
+                </p>
+                <div class="max-w-2xl mx-auto bg-amber-50 p-8 rounded-xl shadow-lg border border-amber-100">
+                    <form id="contactForm" class="space-y-6 text-left">
+                        <div id="validationErrors" class="text-red-600 text-sm mb-4 hidden">
+                            <!-- バリデーションエラーメッセージがここに表示されます -->
+                        </div>
+                        <div>
+                            <label for="name" class="block text-amber-800 text-lg font-medium mb-2">お名前 <span class="text-red-500">*</span></label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：山田 太郎">
+                        </div>
+                        <div>
+                            <label for="age" class="block text-amber-800 text-lg font-medium mb-2">年齢 <span class="text-red-500">*</span></label>
+                            <input type="number" id="age" name="age" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：30" min="1">
+                        </div>
+                        <div>
+                            <label for="address" class="block text-amber-800 text-lg font-medium mb-2">ご住所 <span class="text-red-500">*</span></label>
+                            <input type="text" id="address" name="address" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：東京都練馬区〇〇">
+                        </div>
+                        <div>
+                            <label for="telNumber" class="block text-amber-800 text-lg font-medium mb-2">電話番号 <span class="text-red-500">*</span></label>
+                            <input type="tel" id="telNumber" name="telNumber" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：090-1234-5678">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-amber-800 text-lg font-medium mb-2">メールアドレス</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：example@mail.com">
+                        </div>
+                        <div>
+                            <label for="inquiryContent" class="block text-amber-800 text-lg font-medium mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                            <textarea id="inquiryContent" name="inquiryContent" rows="5" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="具体的なご相談内容をご記入ください。"></textarea>
+                        </div>
+                        <div>
+                            <label for="desiredService" class="block text-amber-800 text-lg font-medium mb-2">ご希望のサービス、またはご相談内容（詳細）</label>
+                            <textarea id="desiredService" name="desiredService" rows="3" class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="ご希望のサービス（例：お悩み相談）や、その他のご相談があればご記入ください。"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" id="submitButton" class="inline-block bg-amber-400 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 ease-in-out text-lg cursor-not-allowed" disabled>
+                                送信する
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-amber-700 text-sm mt-8">
+                        ※ご返信まで2営業日ほどいただく場合がございます。
+                    </p>
+                </div>
+                <p class="text-lg text-amber-800 mt-12 max-w-3xl mx-auto">
+                    営業エリアは東京23区（特に練馬区・杉並区・中野区）を中心に、ご相談次第で他地域も対応可能です。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- モーダルとオーバーレイ -->
+    <div id="successModalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden modal-overlay"></div>
+    <div id="successModal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-xl shadow-2xl z-[100] hidden max-w-md w-11/12 text-center border border-amber-100">
+        <h3 class="text-2xl font-bold text-amber-800 mb-4">お問い合わせありがとうございます！</h3>
+        <p class="text-amber-700 mb-6">
+            内容を拝見し、改めてご連絡させていただきます。<br>
+            ご返信まで2営業日ほどいただく場合がございますので、何卒ご了承ください。
+        </p>
+        <button id="closeModal" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300">閉じる</button>
+    </div>
+
+    <!-- フッター -->
+    <footer class="bg-amber-800 text-amber-100 py-10 rounded-t-3xl shadow-inner">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- X (旧Twitter) -->
+                <a href="https://twitter.com/ginji_nandemoya" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:text-white transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.21 -6.874L4.99 21.75H1.68l7.73-8.825L1.254 2.25H8.08l4.714 6.208L18.244 2.25zm-2.91 17.292h1.18L7.096 3.75H5.81l9.538 15.792z"></path>
+                    </svg>
+                </a>
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@ginji_nandemoya" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:text-white transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816-.029 6.185.42 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816.029-6.185-.42-8.549-4.385-8.816zm-10.615 9.016v-3.6l4 1.8-4 1.8z"></path>
+                    </svg>
+                </a>
+                <!-- LINE -->
+                <a href="https://line.me/ti/p/@ginji_nandemoya" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:text-white transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.327 7.03c-.22.02-.4-.052-.515-.176l-3.344-3.344a.514.514 0 00-.726 0L7.872 8.854c-.113.124-.294.197-.514.177-.354-.03-.615-.333-.615-.68v-.004c0-.285.14-.54.39-.684l4.316-4.316c.39-.39.866-.606 1.342-.606h.001c.476 0 .952.216 1.342.606l4.316 4.316c.25.144.39.399.39.684v.004c0 .347-.261.65-.615.68zM8.887 14.153c-.02-.22-.052-.4-.176-.515l-3.344-3.344a.514.514 0 000-.726l3.344-3.344c.124-.113.197-.294.177-.514-.03-.354-.333-.615-.68-.615h-.004c-.285 0-.54.14-.684.39L3.58 10.358c-.39.39-.606.866-.606 1.342v.001c0 .476.216.952.606 1.342l4.316 4.316c.144.25.399.39.684.39h.004c.347 0 .65-.261.68-.615zM14.153 8.887c-.22-.02-.4-.052-.515-.176l-3.344-3.344a.514.514 0 00-.726 0L8.854 7.872c-.113.124-.294.197-.514.177-.354-.03-.615-.333-.615-.68v-.004c0-.285.14-.54.39-.684l4.316-4.316c.39-.39.866-.606 1.342-.606h.001c.476 0 .952.216 1.342.606l4.316 4.316c.25.144.39.399.39.684v.004c0 .347-.261.65-.615.68zM15.702 15.702a.857.857 0 110-1.714.857.857 0 010 1.714z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-lg mb-2">© 2025 なんでも屋銀時. All rights reserved.</p>
+            <p class="text-sm text-amber-200">最終更新日: 2025年6月16日</p>
+        </div>
+    </footer>
+
+    <script>
+        // モバイルメニューのトグル機能
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // モバイルメニューのリンクをクリックしたらメニューを閉じる
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQのアコーディオン機能
+        function toggleFaq(id) {
+            const element = document.getElementById(id);
+            const arrow = document.getElementById('arrow' + id.slice(-1)); // idの最後の数字を使ってarrow要素を取得
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+                arrow.classList.add('rotate-180');
+            } else {
+                element.classList.add('hidden');
+                arrow.classList.remove('rotate-180');
+            }
+        }
+
+        // お問い合わせフォームの送信とモーダル表示、およびバリデーション
+        const contactForm = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submitButton');
+        const validationErrors = document.getElementById('validationErrors');
+        const successModal = document.getElementById('successModal');
+        const successModalOverlay = document.getElementById('successModalOverlay');
+        const closeModalButton = document.getElementById('closeModal');
+
+        // 必須入力項目を定義
+        const requiredFields = [
+            { id: 'name', name: 'お名前' },
+            { id: 'age', name: '年齢' },
+            { id: 'address', name: 'ご住所' },
+            { id: 'telNumber', name: '電話番号' },
+            { id: 'inquiryContent', name: 'お問い合わせ内容' }
+        ];
+
+        // フォームの入力状態をチェックし、送信ボタンの有効/無効を切り替える関数
+        function checkFormValidity() {
+            let allFieldsFilled = true;
+            requiredFields.forEach(field => {
+                const inputElement = document.getElementById(field.id);
+                // trim()で空白を除去し、値が存在するかチェック
+                if (!inputElement.value.trim()) {
+                    allFieldsFilled = false;
+                }
+            });
+
+            if (allFieldsFilled) {
+                submitButton.removeAttribute('disabled');
+                submitButton.classList.remove('bg-amber-400', 'cursor-not-allowed');
+                submitButton.classList.add('bg-amber-600', 'hover:bg-amber-700');
+            } else {
+                submitButton.setAttribute('disabled', 'true');
+                submitButton.classList.add('bg-amber-400', 'cursor-not-allowed');
+                submitButton.classList.remove('bg-amber-600', 'hover:bg-amber-700');
+            }
+        }
+
+        // フォームの入力イベントリスナー
+        contactForm.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('input', checkFormValidity);
+        });
+
+        // 初期ロード時にフォームの有効性をチェック
+        checkFormValidity();
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // フォームのデフォルト送信を防止
+
+            let missingFields = [];
+            requiredFields.forEach(field => {
+                const inputElement = document.getElementById(field.id);
+                if (!inputElement.value.trim()) {
+                    missingFields.push(field.name);
+                }
+            });
+
+            if (missingFields.length > 0) {
+                // 未入力項目がある場合、エラーメッセージを表示
+                validationErrors.classList.remove('hidden');
+                validationErrors.innerHTML = `<p class="font-bold mb-2">以下の必須項目が未入力です：</p><ul>` +
+                                             missingFields.map(field => `<li>・${field}</li>`).join('') +
+                                             `</ul>`;
+                // エラーメッセージの表示後、フォームの先頭にスクロールしてユーザーに気づかせる
+                validationErrors.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                // すべての必須項目が入力されている場合
+                validationErrors.classList.add('hidden'); // エラーメッセージを非表示にする
+
+                // ここでフォームデータを処理（例: サーバーへの送信、今回は省略）
+                // 実際にはFetch APIなどを使ってサーバーにデータを送ります
+
+                // モーダルを表示
+                successModalOverlay.classList.remove('hidden');
+                successModal.classList.remove('hidden');
+
+                // フォームをリセット
+                contactForm.reset();
+                // フォームリセット後、ボタンの状態を再チェック
+                checkFormValidity();
+            }
+        });
+
+        // モーダルを閉じる
+        closeModalButton.addEventListener('click', () => {
+            successModalOverlay.classList.add('hidden');
+            successModal.classList.add('hidden');
+        });
+
+        successModalOverlay.addEventListener('click', () => {
+            successModalOverlay.classList.add('hidden');
+            successModal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
