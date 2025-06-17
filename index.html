@@ -40,12 +40,12 @@
         <nav class="container mx-auto px-4 flex justify-between items-center">
             <a href="#home" class="text-2xl sm:text-3xl font-extrabold text-amber-800 flex items-center">
                 <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="mr-2 w-14 h-14 object-contain">
-                なんでも屋・銀時 <!-- 修正: 「なんでも屋・銀時」に変更 -->
+                なんでも屋銀時 <!-- ■4. タイトル部分の修正：ナビゲーション上部の「なんでも屋・銀時」から「・」を削除 -->
             </a>
-            <div class="hidden md:flex space-x-4"> <!-- 修正: PCでのナビゲーション項目が1行になるようにspacingを調整 -->
-                <a href="#home" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ホーム</a> <!-- 修正: PCでの文字サイズを調整 -->
-                <a href="#greeting" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ごあいさつ</a> <!-- 修正: 「ごあいさつ・理念」を「ごあいさつ」に分割 -->
-                <a href="philosophy.html" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">理念</a> <!-- 修正: 「理念」の新しい項目を追加 -->
+            <div class="hidden md:flex space-x-4"> <!-- ■3. PC表示時のナビゲーションバー修正: space-x-4で項目間の余白を調整し、1行表示を試みる -->
+                <a href="#home" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ホーム</a>
+                <a href="#greeting" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ごあいさつ</a> <!-- ■1. HP上部の「ごあいさつ・理念」を「ごあいさつ」に分割 -->
+                <a href="philosophy.html" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">理念</a> <!-- ■1. HP上部に「理念」を追加 -->
                 <a href="#services" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">サービス内容</a>
                 <a href="#pricing" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">料金案内</a>
                 <a href="#faq" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">よくある質問</a>
@@ -59,8 +59,8 @@
         <!-- モバイルメニュー -->
         <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-b-xl shadow-lg pb-4">
             <a href="#home" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ホーム</a>
-            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a> <!-- 修正: モバイルメニューも「ごあいさつ」に修正 -->
-            <a href="philosophy.html" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">理念</a> <!-- 修正: モバイルメニューに「理念」を追加 -->
+            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a> <!-- ■1. モバイルメニューも「ごあいさつ」に修正 -->
+            <a href="philosophy.html" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">理念</a> <!-- ■1. モバイルメニューに「理念」を追加 -->
             <a href="#services" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">サービス内容</a>
             <a href="#pricing" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
             <a href="#faq" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">よくある質問</a>
@@ -76,11 +76,11 @@
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
                 <div class="text-center md:text-left md:w-1/2 mb-10 md:mb-0">
                     <h1 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold mb-6 leading-tight text-amber-900">
-                        <span class="block text-amber-700 text-xl sm:text-2xl lg:text-4xl">あなたの心に寄り添う、</span> <!-- 修正: スマートフォンでの改行とフォントサイズ調整を再調整 -->
-                        なんでも屋・銀時 <!-- 修正: 「なんでも屋・銀時」に変更 -->
+                        <span class="block text-amber-700 text-xl sm:text-2xl lg:text-4xl">あなたの心に寄り添う</span> <!-- ■1. トップのテキスト修正: 句読点（「、」）を削除 -->
+                        なんでも屋・銀時 <!-- ■3. タイトル部分の修正: 「なんでも屋・銀時」の中黒はそのまま維持 -->
                     </h1>
                     <p class="text-xl md:text-2xl text-amber-800 mb-8 max-w-lg mx-auto md:mx-0">
-                        東京・練馬区を拠点に、一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになることを信条としています。
+                        東京・練馬区を拠点に活動する「なんでも屋銀時」は、一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになることを信条としています。 <!-- ■2. テキストの改行調整 -->
                     </p>
                     <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
                         まずは気軽に相談する
@@ -103,7 +103,7 @@
                         ごあいさつ
                     </h2>
                     <p class="text-lg md:text-xl text-amber-800 mb-4">
-                        「なんでも屋銀時」は、東京・練馬区を拠点に活動する個人の仕事屋です。<br>
+                        「なんでも屋銀時」は、東京・練馬区を拠点に活動する個人の仕事屋です。
                         お金儲けを目的とするのではなく、<br>
                         「一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになること」――<br>
                         そして何より、私自身が自分の心と身体を大切にしながら、無理なく続けられることを信条としています。<br><br>
