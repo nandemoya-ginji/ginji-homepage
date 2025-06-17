@@ -39,7 +39,7 @@
     <header class="bg-white shadow-lg py-4 fixed w-full z-50 rounded-b-xl">
         <nav class="container mx-auto px-4 flex justify-between items-center">
             <a href="#home" class="text-3xl font-extrabold text-amber-800 flex items-center">
-                <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="mr-2 w-10 h-10 object-contain">
+                <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="mr-2 w-14 h-14 object-contain"> <!-- w-12 h-12 から w-14 h-14 に変更して拡大 -->
                 なんでも屋銀時
             </a>
             <div class="hidden md:flex space-x-6">
@@ -74,7 +74,7 @@
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
                 <div class="text-center md:text-left md:w-1/2 mb-10 md:mb-0">
                     <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-amber-900">
-                        <span class="block text-amber-700">あなたの心に寄り添う、</span>
+                        <span class="block text-amber-700">あなたの心に寄り添う</span>
                         なんでも屋銀時
                     </h1>
                     <p class="text-xl md:text-2xl text-amber-800 mb-8 max-w-lg mx-auto md:mx-0">
@@ -86,7 +86,7 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center md:justify-end">
                     <!-- トップバナー円形画像 -->
-                    <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-2xl border-4 border-white object-contain p-4 bg-white">
+                    <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="w-80 h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-2xl border-4 border-white object-contain p-4 bg-white"> <!-- w-72 h-72 から w-80 h-80 に変更して拡大 -->
                 </div>
             </div>
         </section>
@@ -267,9 +267,12 @@
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div id="faq1" class="hidden mt-4 text-amber-800 text-lg">
-                            <span class="font-bold text-amber-600 mr-2">A.</span>東京23区（特に練馬区・杉並区・中野区）を中心に活動しています。<br>
-                            ご相談次第で他地域も対応可能ですので、まずはお気軽にご連絡ください。
+                        <div id="faq1" class="hidden mt-4 text-amber-800 text-lg flex">
+                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
+                            <div class="flex-grow text-left">
+                                東京23区（特に練馬区・杉並区・中野区）を中心に活動しています。<br>
+                                ご相談次第で他地域も対応可能ですので、まずはお気軽にご連絡ください。
+                            </div>
                         </div>
                     </div>
                     <!-- FAQアイテム2 -->
@@ -281,8 +284,11 @@
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div id="faq2" class="hidden mt-4 text-amber-800 text-lg">
-                            <span class="font-bold text-amber-600 mr-2">A.</span>一切ありません。お客様との信頼関係を最優先に、誠実な対応を心がけています。どうぞご安心ください。
+                        <div id="faq2" class="hidden mt-4 text-amber-800 text-lg flex">
+                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
+                            <div class="flex-grow text-left">
+                                一切ありません。お客様との信頼関係を最優先に、誠実な対応を心がけています。どうぞご安心ください。
+                            </div>
                         </div>
                     </div>
                     <!-- FAQアイテム3 -->
@@ -294,10 +300,13 @@
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div id="faq3" class="hidden mt-4 text-amber-800 text-lg">
-                            <span class="font-bold text-amber-600 mr-2">A.</span>はい、可能です。<br>
-                            レンタルおじさん的な感覚で、ただ傍にいてほしい、話し相手になってほしいといったご依頼も喜んでお引き受けします。<br>
-                            精神的な寄り添いや共感を大切にしています。
+                        <div id="faq3" class="hidden mt-4 text-amber-800 text-lg flex">
+                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
+                            <div class="flex-grow text-left">
+                                はい、可能です。<br>
+                                レンタルおじさん的な感覚で、ただ傍にいてほしい、話し相手になってほしいといったご依頼も喜んでお引き受けします。<br>
+                                精神的な寄り添いや共感を大切にしています。
+                            </div>
                         </div>
                     </div>
                 </div>
