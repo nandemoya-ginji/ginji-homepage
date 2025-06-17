@@ -38,17 +38,18 @@
     <!-- ヘッダーとナビゲーション -->
     <header class="bg-white shadow-lg py-4 fixed w-full z-50 rounded-b-xl">
         <nav class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-extrabold text-amber-800 flex items-center">
-                <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="mr-2 w-14 h-14 object-contain"> <!-- w-12 h-12 から w-14 h-14 に変更して拡大 -->
-                なんでも屋銀時
+            <a href="#home" class="text-2xl sm:text-3xl font-extrabold text-amber-800 flex items-center">
+                <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="mr-2 w-14 h-14 object-contain">
+                なんでも屋・銀時 <!-- 修正: 「なんでも屋・銀時」に変更 -->
             </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#home" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ホーム</a>
-                <a href="#greeting" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ごあいさつ・理念</a>
-                <a href="#services" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">サービス内容</a>
-                <a href="#pricing" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">料金案内</a>
-                <a href="#faq" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">よくある質問</a>
-                <a href="#contact" class="text-lg font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ご依頼・お問い合わせ</a>
+            <div class="hidden md:flex space-x-4"> <!-- 修正: PCでのナビゲーション項目が1行になるようにspacingを調整 -->
+                <a href="#home" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ホーム</a> <!-- 修正: PCでの文字サイズを調整 -->
+                <a href="#greeting" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ごあいさつ</a> <!-- 修正: 「ごあいさつ・理念」を「ごあいさつ」に分割 -->
+                <a href="philosophy.html" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">理念</a> <!-- 修正: 「理念」の新しい項目を追加 -->
+                <a href="#services" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">サービス内容</a>
+                <a href="#pricing" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">料金案内</a>
+                <a href="#faq" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">よくある質問</a>
+                <a href="#contact" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ご依頼・お問い合わせ</a>
             </div>
             <!-- モバイルメニューボタン -->
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-amber-800 hover:bg-amber-100 transition duration-300">
@@ -58,7 +59,8 @@
         <!-- モバイルメニュー -->
         <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-b-xl shadow-lg pb-4">
             <a href="#home" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ホーム</a>
-            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ・理念</a>
+            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a> <!-- 修正: モバイルメニューも「ごあいさつ」に修正 -->
+            <a href="philosophy.html" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">理念</a> <!-- 修正: モバイルメニューに「理念」を追加 -->
             <a href="#services" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">サービス内容</a>
             <a href="#pricing" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
             <a href="#faq" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">よくある質問</a>
@@ -73,9 +75,9 @@
             <div class="absolute inset-0 bg-pattern opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23fcd34d\' fill-opacity=\'0.2\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
                 <div class="text-center md:text-left md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-amber-900">
-                        <span class="block text-amber-700">あなたの心に寄り添う</span>
-                        なんでも屋銀時
+                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold mb-6 leading-tight text-amber-900">
+                        <span class="block text-amber-700 text-xl sm:text-2xl lg:text-4xl">あなたの心に寄り添う、</span> <!-- 修正: スマートフォンでの改行とフォントサイズ調整を再調整 -->
+                        なんでも屋・銀時 <!-- 修正: 「なんでも屋・銀時」に変更 -->
                     </h1>
                     <p class="text-xl md:text-2xl text-amber-800 mb-8 max-w-lg mx-auto md:mx-0">
                         東京・練馬区を拠点に、一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになることを信条としています。
@@ -86,7 +88,7 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center md:justify-end">
                     <!-- トップバナー円形画像 -->
-                    <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="w-80 h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-2xl border-4 border-white object-contain p-4 bg-white"> <!-- w-72 h-72 から w-80 h-80 に変更して拡大 -->
+                    <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-2xl border-4 border-white object-contain p-4 bg-white">
                 </div>
             </div>
         </section>
