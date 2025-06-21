@@ -34,9 +34,9 @@
 
         /* QRコード画像のレスポンシブ調整 */
         .qr-code-image {
-            width: 200px; /* PC表示時の固定幅 */
+            width: 250px; /* PC表示時の固定幅 */
             height: auto;
-            max-width: 80%; /* スマホ表示時に80%以下に縮小 */
+            max-width: 90%; /* スマホ表示時に90%以下に縮小 */
             display: block; /* 中央揃えのためにブロック要素に */
             margin: 0 auto; /* 中央揃え */
         }
@@ -216,25 +216,125 @@
 
         <div class="section-divider"></div>
 
-        <!-- LINE QRコードセクション -->
-        <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
-            <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
-                
-                <!-- LINE追加ボタン -->
-                <div>
-                    <a href="https://lin.ee/uRr4H6m" target="_blank" rel="noopener">
-                        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINEで友だち追加" height="50" style="border:0;">
-                    </a>
-                    <p class="text-sm mt-2.5">ボタンを押すとLINEアプリが開きます</p>
+        <!-- 料金案内セクション -->
+        <section id="pricing" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    料金案内
+                </h2>
+                <div class="flex flex-col lg:flex-row justify-center gap-8">
+                    <!-- プランカード1 -->
+                    <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
+                        <h3 class="text-3xl font-bold text-amber-700 mb-4">基本料金</h3>
+                        <p class="text-4xl font-extrabold text-amber-900 mb-6">
+                            ¥3,000<span class="text-lg font-medium text-amber-700"> / 60分（税込）</span>
+                        </p>
+                        <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 最初の60分</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> どのサービスも共通</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 延長料金は別途</li>
+                        </ul>
+                        <p class="text-amber-800 text-base mt-auto">
+                            ※交通費・実費（施設利用料など）は別途頂戴いたします。
+                        </p>
+                    </div>
+                    <!-- プランカード2 -->
+                    <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
+                        <h3 class="text-3xl font-bold text-amber-700 mb-4">延長料金</h3>
+                        <p class="text-4xl font-extrabold text-amber-900 mb-6">
+                            ¥1,500<span class="text-lg font-medium text-amber-700"> / 30分（税込）</span>
+                        </p>
+                        <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 60分以降の延長</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 15分単位で調整可能</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 事前にお見積もりいたします</li>
+                        </ul>
+                        <p class="text-amber-800 text-base mt-auto">
+                            ※詳細はお問い合わせください。
+                        </p>
+                    </div>
                 </div>
+                <p class="text-lg text-amber-800 mt-12 max-w-2xl mx-auto">
+                    ご依頼内容に応じて柔軟に対応いたしますので、まずは<a href="#contact" class="text-amber-600 hover:underline font-bold">お問い合わせ</a>よりご相談ください。お見積もりを丁寧にご提示いたします。
+                </p>
+            </div>
+        </section>
 
-                <!-- QRコード -->
-                <div>
-                    <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/L_gainfriends_2dbarcodes_GW.png?raw=true" alt="LINE友だち追加QRコード" class="qr-code-image">
-                    <p class="text-sm mt-2.5">PCの方はスマホでQRコードを読み取ってください</p>
+        <div class="section-divider"></div>
+
+        <!-- FAQセクション -->
+        <section id="faq" class="py-16 md:py-24 bg-emerald-50 rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    よくある質問 (FAQ)
+                </h2>
+                <div class="space-y-6 max-w-3xl mx-auto">
+                    <!-- FAQアイテム1 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq1')">
+                            <span class="flex items-center">
+                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                                営業エリアはどこまでですか？
+                            </span>
+                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="faq1" class="hidden mt-4 text-amber-800 text-lg flex">
+                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
+                            <div class="flex-grow text-left">
+                                東京23区（特に練馬区・杉並区・中野区）を中心に活動しています。<br>
+                                ご相談次第で他地域も対応可能ですので、まずはお気軽にご連絡ください。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQアイテム2 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq2')">
+                            <span class="flex items-center">
+                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                                強引な勧誘や営業はありますか？
+                            </span>
+                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="faq2" class="hidden mt-4 text-amber-800 text-lg flex">
+                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
+                            <div class="flex-grow text-left">
+                                一切ありません。お客様との信頼関係を最優先に、誠実な対応を心がけています。どうぞご安心ください。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQアイテム3 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq3')">
+                            <span class="flex items-center">
+                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                                「ただ一緒にいるだけ」の依頼も可能ですか？
+                            </span>
+                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="faq3" class="hidden mt-4 text-amber-800 text-lg flex">
+                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
+                            <div class="flex-grow text-left">
+                                はい、可能です。<br>
+                                レンタルおじさん的な感覚で、ただ傍にいてほしい、話し相手になってほしいといったご依頼も喜んでお引き受けします。<br>
+                                精神的な寄り添いや共感を大切にしています。
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
+        <div class="section-divider"></div>
+
+        <!-- LINE QRコードセクションを追加 -->
+        <section class="line-contact text-center py-5">
+            <h3 class="text-xl sm:text-2xl font-bold text-amber-800 mb-4">ご依頼・ご相談はLINEでも受け付けています</h3>
+            <p class="text-base text-amber-800 mb-5">
+                スマートフォンでQRコードを読み取っていただくか、<br>
+                LINEアプリから「@○○○○」で検索してください。
+            </p>
+            <div class="my-5"> <!-- 画像の上下余白 -->
+                <img src="path/to/line_qr.png" alt="LINEの友だち追加QRコード" class="qr-code-image">
             </div>
         </section>
 
@@ -332,7 +432,51 @@
             <p class="text-lg mb-2">© 2025 なんでも屋銀時. All rights reserved.</p>
             <p class="text-sm text-amber-200">最終更新日: 2025年6月16日</p>
         </div>
-    </footer>
+    
+<section id="price" style="background-color: #f7f7f7; padding: 40px 20px;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 24px; margin-bottom: 20px;">料金について</h2>
+    <p style="font-size: 16px; margin-bottom: 40px;">
+      ご依頼の内容に応じて、できるかぎり柔軟に対応いたします。目安として、以下のような料金でお受けしています。
+    </p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px;">対面でのお手伝い</h3>
+        <p style="font-size: 16px;">60分 3,000円〜</p>
+      </div>
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px;">オンライン相談</h3>
+        <p style="font-size: 16px;">60分 2,000円〜</p>
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px;">オンライン限定プラン</h3>
+        <p style="font-size: 16px;">30分 1,200円〜</p>
+      </div>
+
+        <p style="font-size: 16px;">60分 2,000円〜</p>
+      
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px;">オンライン限定プラン</h3>
+        <p style="font-size: 16px;">60分 3,000円</p>
+        <p style="font-size: 14px; color: #555; margin-top: 10px;">
+          通話は基本的にLINE通話またはZOOMで行います。<br>
+          その他の料金は一切かかりませんが、22時〜翌朝6時のご依頼には深夜料金が追加されることがあります。
+        </p>
+      </div>
+
+    </div>
+    
+    <p style="font-size: 14px; margin-top: 20px; color: #444;">
+      ご希望の連絡手段（LINEまたはZOOM）が使用できない場合は、事前にご相談ください。<br>
+      深夜料金の目安や適用条件についても、お問い合わせ時にご案内いたします。
+    </p>
+
+    <p style="font-size: 14px; margin-top: 40px; color: #666;">
+      ※ご依頼内容によってはお引き受けできないこともあります。まずはお気軽にご相談ください。
+    </p>
+  </div>
+</section>
+
+</footer>
 
     <script>
         // モバイルメニューのトグル機能
