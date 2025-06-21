@@ -31,6 +31,15 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 99; /* モーダルよりも下に設定 */
         }
+
+        /* QRコード画像のレスポンシブ調整 */
+        .qr-code-image {
+            width: 250px; /* PC表示時の固定幅 */
+            height: auto;
+            max-width: 90%; /* スマホ表示時に90%以下に縮小 */
+            display: block; /* 中央揃えのためにブロック要素に */
+            margin: 0 auto; /* 中央揃え */
+        }
     </style>
 </head>
 <body class="bg-amber-50 text-amber-900 leading-relaxed">
@@ -40,12 +49,12 @@
         <nav class="container mx-auto px-4 flex justify-between items-center">
             <a href="#home" class="text-2xl sm:text-3xl font-extrabold text-amber-800 flex items-center">
                 <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="mr-2 w-14 h-14 object-contain">
-                なんでも屋銀時 <!-- ■4. タイトル部分の修正：ナビゲーション上部の「なんでも屋・銀時」から「・」を削除 -->
+                なんでも屋銀時
             </a>
-            <div class="hidden md:flex space-x-4"> <!-- ■3. PC表示時のナビゲーションバー修正: space-x-4で項目間の余白を調整し、1行表示を試みる -->
+            <div class="hidden md:flex space-x-4">
                 <a href="#home" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ホーム</a>
-                <a href="#greeting" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ごあいさつ</a> <!-- ■1. HP上部の「ごあいさつ・理念」を「ごあいさつ」に分割 -->
-                <a href="philosophy.html" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">理念</a> <!-- ■1. HP上部に「理念」を追加 -->
+                <a href="#greeting" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ごあいさつ</a>
+                <a href="philosophy.html" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">理念</a>
                 <a href="#services" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">サービス内容</a>
                 <a href="#pricing" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">料金案内</a>
                 <a href="#faq" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">よくある質問</a>
@@ -59,8 +68,8 @@
         <!-- モバイルメニュー -->
         <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-b-xl shadow-lg pb-4">
             <a href="#home" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ホーム</a>
-            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a> <!-- ■1. モバイルメニューも「ごあいさつ」に修正 -->
-            <a href="philosophy.html" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">理念</a> <!-- ■1. モバイルメニューに「理念」を追加 -->
+            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a>
+            <a href="philosophy.html" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">理念</a>
             <a href="#services" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">サービス内容</a>
             <a href="#pricing" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
             <a href="#faq" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">よくある質問</a>
@@ -76,11 +85,11 @@
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
                 <div class="text-center md:text-left md:w-1/2 mb-10 md:mb-0">
                     <h1 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold mb-6 leading-tight text-amber-900">
-                        <span class="block text-amber-700 text-xl sm:text-2xl lg:text-4xl">あなたの心に寄り添う</span> <!-- ■1. トップのテキスト修正: 句読点（「、」）を削除 -->
-                        なんでも屋・銀時 <!-- ■3. タイトル部分の修正: 「なんでも屋・銀時」の中黒はそのまま維持 -->
+                        <span class="block text-amber-700 text-xl sm:text-2xl lg:text-4xl">あなたの心に寄り添う</span>
+                        なんでも屋・銀時
                     </h1>
                     <p class="text-xl md:text-2xl text-amber-800 mb-8 max-w-lg mx-auto md:mx-0">
-                        東京・練馬区を拠点に活動する「なんでも屋銀時」は、一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになることを信条としています。 <!-- ■2. テキストの改行調整 -->
+                        東京・練馬区を拠点に活動する「なんでも屋銀時」は、一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになることを信条としています。
                     </p>
                     <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
                         まずは気軽に相談する
@@ -103,7 +112,7 @@
                         ごあいさつ
                     </h2>
                     <p class="text-lg md:text-xl text-amber-800 mb-4">
-                        「なんでも屋銀時」は、東京・練馬区を拠点に活動する個人の仕事屋です。
+                        「なんでも屋銀時」は、東京・練馬区を拠点に活動する個人の仕事屋です。<br>
                         お金儲けを目的とするのではなく、<br>
                         「一人ひとりと誠実に向き合い、ほんの少しでも生きる支えになること」――<br>
                         そして何より、私自身が自分の心と身体を大切にしながら、無理なく続けられることを信条としています。<br><br>
@@ -207,115 +216,18 @@
 
         <div class="section-divider"></div>
 
-        <!-- 料金案内セクション -->
-        <section id="pricing" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="container mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
-                    料金案内
-                </h2>
-                <div class="flex flex-col lg:flex-row justify-center gap-8">
-                    <!-- プランカード1 -->
-                    <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
-                        <h3 class="text-3xl font-bold text-amber-700 mb-4">基本料金</h3>
-                        <p class="text-4xl font-extrabold text-amber-900 mb-6">
-                            ¥3,000<span class="text-lg font-medium text-amber-700"> / 60分（税込）</span>
-                        </p>
-                        <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 最初の60分</li>
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> どのサービスも共通</li>
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 延長料金は別途</li>
-                        </ul>
-                        <p class="text-amber-800 text-base mt-auto">
-                            ※交通費・実費（施設利用料など）は別途頂戴いたします。
-                        </p>
-                    </div>
-                    <!-- プランカード2 -->
-                    <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
-                        <h3 class="text-3xl font-bold text-amber-700 mb-4">延長料金</h3>
-                        <p class="text-4xl font-extrabold text-amber-900 mb-6">
-                            ¥1,500<span class="text-lg font-medium text-amber-700"> / 30分（税込）</span>
-                        </p>
-                        <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 60分以降の延長</li>
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 15分単位で調整可能</li>
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 事前にお見積もりいたします</li>
-                        </ul>
-                        <p class="text-amber-800 text-base mt-auto">
-                            ※詳細はお問い合わせください。
-                        </p>
-                    </div>
-                </div>
-                <p class="text-lg text-amber-800 mt-12 max-w-2xl mx-auto">
-                    ご依頼内容に応じて柔軟に対応いたしますので、まずは<a href="#contact" class="text-amber-600 hover:underline font-bold">お問い合わせ</a>よりご相談ください。お見積もりを丁寧にご提示いたします。
-                </p>
+        <!-- LINE QRコードセクション -->
+        <section class="line-contact text-center py-5">
+            <h3 class="text-xl sm:text-2xl font-bold text-amber-800 mb-4">ご依頼・ご相談はLINEでも受け付けています</h3>
+            <p class="text-base text-amber-800 mb-5">
+                スマートフォンでQRコードを読み取っていただくか、<br>
+                LINEアプリから「@nandemoya_ginji」で検索してください。 <!-- LINE IDを更新 -->
+            </p>
+            <div class="my-5"> <!-- 画像の上下余白 -->
+                <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/line-qr-ginji.png?raw=true" alt="LINEの友だち追加QRコード" class="qr-code-image">
             </div>
         </section>
 
-        <div class="section-divider"></div>
-
-        <!-- FAQセクション -->
-        <section id="faq" class="py-16 md:py-24 bg-emerald-50 rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="container mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
-                    よくある質問 (FAQ)
-                </h2>
-                <div class="space-y-6 max-w-3xl mx-auto">
-                    <!-- FAQアイテム1 -->
-                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
-                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq1')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
-                                営業エリアはどこまでですか？
-                            </span>
-                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq1" class="hidden mt-4 text-amber-800 text-lg flex">
-                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
-                            <div class="flex-grow text-left">
-                                東京23区（特に練馬区・杉並区・中野区）を中心に活動しています。<br>
-                                ご相談次第で他地域も対応可能ですので、まずはお気軽にご連絡ください。
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQアイテム2 -->
-                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
-                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq2')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
-                                強引な勧誘や営業はありますか？
-                            </span>
-                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq2" class="hidden mt-4 text-amber-800 text-lg flex">
-                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
-                            <div class="flex-grow text-left">
-                                一切ありません。お客様との信頼関係を最優先に、誠実な対応を心がけています。どうぞご安心ください。
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQアイテム3 -->
-                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
-                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq3')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
-                                「ただ一緒にいるだけ」の依頼も可能ですか？
-                            </span>
-                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq3" class="hidden mt-4 text-amber-800 text-lg flex">
-                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
-                            <div class="flex-grow text-left">
-                                はい、可能です。<br>
-                                レンタルおじさん的な感覚で、ただ傍にいてほしい、話し相手になってほしいといったご依頼も喜んでお引き受けします。<br>
-                                精神的な寄り添いや共感を大切にしています。
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
 
         <!-- ご依頼・お問い合わせセクション -->
         <section id="contact" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8 mb-12">
