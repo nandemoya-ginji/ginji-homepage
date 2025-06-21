@@ -16,40 +16,44 @@
             background-color: #FAF9F5; /* 全体背景色 */
             color: #333; /* 文字色 */
             line-height: 1.8; /* 行間を広めに */
+            font-size: 16px; /* 本文の基準フォントサイズ */
         }
         /* 全体コンテナの幅制限と中央寄せ */
         .container-responsive {
             max-width: 720px; /* 横幅を720pxに制限 */
             margin-left: auto;
             margin-right: auto;
-            padding-left: 1rem; /* スマホ時の余白 */
-            padding-right: 1rem; /* スマホ時の余白 */
+            padding-left: 15px; /* スマホ時の左右余白 */
+            padding-right: 15px; /* スマホ時の左右余白 */
         }
-        @media (min-width: 768px) { /* md (768px) 以上でPC向け調整 */
-            .container-responsive {
-                padding-left: 2rem; /* PC時の余白 */
-                padding-right: 2rem; /* PC時の余白 */
-            }
+        /* 各セクションの段落余白 */
+        .section-content p {
+            margin-bottom: 1.2em; /* 段落ごとに上下1.2emの余白 */
         }
-        /* セクション区切り線 */
-        .section-separator {
-            border-bottom: 1px solid #B0D7EA; /* 薄水色の罫線 */
-            padding-bottom: 2rem;
-            margin-bottom: 2rem;
+        /* セクション区切り線と余白 */
+        .section-divider-thin {
+            border-bottom: 1px solid #B0D7EA; /* アクセントカラーの薄水色の罫線 */
+            margin-top: 3rem; /* セクション間の余白 */
+            margin-bottom: 3rem; /* セクション間の余白 */
         }
-        .section-separator:last-of-type {
-            border-bottom: none; /* 最後のセクション区切りは罫線なし */
-        }
-        /* FAQ回答のA:を左揃えにするためのスタイル */
-        .faq-answer-content {
-            display: flex;
-            align-items: flex-start;
-        }
-        .faq-answer-content .answer-prefix {
+        /* 見出しのスタイル */
+        .section-heading {
+            font-size: 20px; /* 見出しのフォントサイズ */
             font-weight: bold;
-            color: #B0D7EA; /* アクセントカラーを適用 */
-            margin-right: 0.5rem;
-            flex-shrink: 0; /* 「A.」が縮まないようにする */
+            color: #333; /* 見出し色 */
+            margin-bottom: 1.5em; /* 見出し下の余白 */
+            padding-bottom: 0.5em;
+            border-bottom: 2px solid #C7B8DD; /* アクセントカラーの藤色の下線 */
+            display: inline-block; /* 下線を見出しの幅に合わせる */
+        }
+        /* スマートフォンでの調整 (Tailwindのブレークポイントsm:640px以下) */
+        @media (max-width: 639px) {
+            body {
+                font-size: 16px; /* スマホの本文フォントサイズ */
+            }
+            .section-heading {
+                font-size: 20px; /* スマホの見出しフォントサイズ */
+            }
         }
     </style>
 </head>
@@ -60,65 +64,77 @@
         <header class="text-center mb-8">
             <h1 class="text-3xl sm:text-4xl font-bold mb-2">理念 - なんでも屋銀時の想い</h1>
             <p class="text-base sm:text-lg text-gray-600">2025年7月1日から、ひとりで静かに始めました。</p>
-            <hr class="border-t-2 border-purple-300 w-24 mx-auto my-4"> <!-- アクセントカラーの罫線 -->
+            <hr class="border-t-2 border-[#C7B8DD] w-24 mx-auto my-4"> <!-- アクセントカラーの罫線 -->
         </header>
 
-        <!-- 本文（理念バージョン0.1） -->
-        <section class="mb-8 section-separator">
-            <p class="text-base sm:text-lg mb-4">
+        <!-- ① セクション1：はじめに -->
+        <section class="section-content">
+            <h3 class="section-heading">はじめに</h3>
+            <p>
                 2025年7月1日、「なんでも屋銀時」は、ひとりの個人として静かにスタートしました。
                 まだまだ始めたばかりで、至らない点もたくさんあると思います。ですが、できるかぎり誠実に、一つひとつのご依頼に向き合っていきたいと考えています。温かい目で見守っていただけたら嬉しいです。
             </p>
-            <p class="text-base sm:text-lg mb-4">
-                ご依頼の内容によっては、私では対応が難しいこともあります。たとえば車を使った作業、大型の工具が必要な作業、あるいは高度な専門知識や技術が求められる作業などは、別の専門の業者さんにお願いされたほうが確実かもしれません。
+            <p>
+                ご依頼の内容によっては、私では対応が難しいこともあります。たとえば車が必要な作業、大型の工具が必要な作業、あるいは高度な専門知識や技術が求められる作業などは、別の専門の業者さんにお願いされたほうが確実かもしれません。
             </p>
-            <p class="text-base sm:text-lg">
+            <p>
                 そのかわり、「人手がもう一人ほしい」「ちょっとしたことを手伝ってほしい」「話を聞いてほしい」<br>
                 そんな時には、ぜひ私のことを思い出してください。お役に立てる場面がきっとあると思います。
             </p>
         </section>
 
-        <section class="mb-8 section-separator">
-            <p class="text-base sm:text-lg mb-4">
+        <div class="section-divider-thin"></div>
+
+        <!-- ② セクション2：なんでも屋を始めた理由 -->
+        <section class="section-content">
+            <h3 class="section-heading">なんでも屋を始めた理由</h3>
+            <p>
                 この仕事を始めたのには、はっきりとした理由があります。
                 ここ数年で、私自身の価値観が大きく変わりました。<br>
-                生きるとは何か、働くとは何か――そういった問いに、今まで以上に真剣に向き合うようになったのです。<br>
+                生きるとは何か、働くとは何か――そういった問いに、今まで以上に真剣に向き合うようになったのです。
                 同時に、世界もすごい勢いで変化しています。<br>
                 そんな時代だからこそ、自分の心と身体を大切にしながら、誰かの役に立てる仕事をしていきたい。<br>
                 この直感は、とても強く、私にとって確かなものでした。
             </p>
-            <p class="text-base sm:text-lg">
-                料金についても、たくさん考えました。<br>
-                私は「月商○○円」や「年収○○万円」といった数字には、あまり興味がありません。<br>
+        </section>
+
+        <div class="section-divider-thin"></div>
+
+        <!-- ③ セクション3：料金についての考え方 -->
+        <section class="section-content">
+            <h3 class="section-heading">料金についての考え方</h3>
+            <p>
+                料金についても、たくさん考えました。
+                私は「月商○○円」や「年収○○万円」といった数字には、まったく興味がありません。
                 ただ、生活していくには、最低限の収入は必要です。<br>
                 だからこそ、心と身体に無理のない範囲で働ける料金を、自分自身の基準で決めました。
             </p>
-        </section>
-
-        <section class="mb-8">
-            <p class="text-base sm:text-lg">
+            <p>
                 最初はもっと安くして、困っている人のために頑張りたいという気持ちもありました。<br>
                 でも、それで自分が疲れ果ててしまったら、結局はどこかの会社で働いていた頃と何も変わらない。<br>
                 そう気づいたとき、「自分自身の人生を、自分で作っていく」という意志が、自然と料金の土台になりました。
             </p>
         </section>
 
-        <!-- クッションフッター -->
-        <footer class="bg-[#F0EEE9] text-center py-8 px-4 rounded-xl shadow-inner my-8">
-            <p class="text-base sm:text-lg">
-                ここまでお読みいただき、ありがとうございました。
+        <div class="section-divider-thin"></div>
+
+        <!-- ④ セクション4：おわりに -->
+        <section class="bg-[#F0EEE9] py-8 px-4 sm:px-8 rounded-xl shadow-inner my-8 text-center"> <!-- 背景色と余白、中央揃え -->
+            <h3 class="section-heading hidden">おわりに</h3> <!-- 見出しは構造上存在させるが非表示に -->
+            <p class="text-base sm:text-lg mb-0">
+                ここまでお読みいただき、ありがとうございました。<br>
                 必要なときに、ふと誰かの顔を思い出すように、“銀時”のことを思い出していただけたら幸いです。
             </p>
-        </footer>
+        </section>
 
-        <!-- ページ下部のシンプルなフッター -->
+        <!-- ページ最下部フッター -->
         <div class="text-center text-sm py-4">
             <p class="mb-2">© 2025 なんでも屋銀時</p>
             <nav>
                 <ul class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-600">
                     <li><a href="index.html#contact" class="hover:underline">ご依頼方法</a></li>
                     <li><a href="index.html#pricing" class="hover:underline">料金について</a></li>
-                    <!-- 他のリンクもここに追加可能 -->
+                    <li><a href="index.html#home" class="hover:underline">トップページへ戻る</a></li>
                 </ul>
             </nav>
         </div>
