@@ -34,9 +34,9 @@
 
         /* QRコード画像のレスポンシブ調整 */
         .qr-code-image {
-            width: 250px; /* PC表示時の固定幅 */
+            width: 200px; /* PC表示時の固定幅 */
             height: auto;
-            max-width: 90%; /* スマホ表示時に90%以下に縮小 */
+            max-width: 80%; /* スマホ表示時に80%以下に縮小 */
             display: block; /* 中央揃えのためにブロック要素に */
             margin: 0 auto; /* 中央揃え */
         }
@@ -217,14 +217,24 @@
         <div class="section-divider"></div>
 
         <!-- LINE QRコードセクション -->
-        <section class="line-contact text-center py-5">
-            <h3 class="text-xl sm:text-2xl font-bold text-amber-800 mb-4">ご依頼・ご相談はLINEでも受け付けています</h3>
-            <p class="text-base text-amber-800 mb-5">
-                スマートフォンでQRコードを読み取っていただくか、<br>
-                LINEアプリから「@nandemoya_ginji」で検索してください。 <!-- LINE IDを更新 -->
-            </p>
-            <div class="my-5"> <!-- 画像の上下余白 -->
-                <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/line-qr-ginji.png?raw=true" alt="LINEの友だち追加QRコード" class="qr-code-image">
+        <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
+            <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                
+                <!-- LINE追加ボタン -->
+                <div>
+                    <a href="https://lin.ee/uRr4H6m" target="_blank" rel="noopener">
+                        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINEで友だち追加" height="50" style="border:0;">
+                    </a>
+                    <p class="text-sm mt-2.5">ボタンを押すとLINEアプリが開きます</p>
+                </div>
+
+                <!-- QRコード -->
+                <div>
+                    <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/L_gainfriends_2dbarcodes_GW.png?raw=true" alt="LINE友だち追加QRコード" class="qr-code-image">
+                    <p class="text-sm mt-2.5">PCの方はスマホでQRコードを読み取ってください</p>
+                </div>
+
             </div>
         </section>
 
