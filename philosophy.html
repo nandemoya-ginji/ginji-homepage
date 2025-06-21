@@ -55,6 +55,18 @@
                 font-size: 20px; /* スマホの見出しフォントサイズ */
             }
         }
+        /* ページ最下部フッターのリンクアイコン */
+        .footer-link-icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 1.2em; /* アイコンのサイズ調整 */
+            height: 1.2em;
+            margin-right: 0.3em;
+        }
+        /* リンクのホバー効果 */
+        .hover\:bg-blue-100:hover {
+            background-color: #E0F3FF; /* ホバー時の背景色 */
+        }
     </style>
 </head>
 <body class="leading-relaxed">
@@ -66,6 +78,13 @@
             <p class="text-base sm:text-lg text-gray-600">2025年7月1日から、ひとりで静かに始めました。</p>
             <hr class="border-t-2 border-[#C7B8DD] w-24 mx-auto my-4"> <!-- アクセントカラーの罫線 -->
         </header>
+
+        <!-- 導入文（イントロ） -->
+        <section class="section-content mb-8">
+            <p class="text-base sm:text-lg">
+                こんにちは、「なんでも屋銀時」です。初めてこのページをご覧いただく方へ、私の想いや背景を少しだけお話しさせてください。
+            </p>
+        </section>
 
         <!-- ① セクション1：はじめに -->
         <section class="section-content">
@@ -132,9 +151,9 @@
             <p class="mb-2">© 2025 なんでも屋銀時</p>
             <nav>
                 <ul class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-600">
-                    <li><a href="index.html#contact" class="hover:underline">ご依頼方法</a></li>
-                    <li><a href="index.html#pricing" class="hover:underline">料金について</a></li>
-                    <li><a href="index.html#home" class="hover:underline">トップページへ戻る</a></li>
+                    <li><a href="index.html#contact" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out"><span class="footer-link-icon">📄</span>ご依頼方法</a></li>
+                    <li><a href="index.html#pricing" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out"><span class="footer-link-icon">💰</span>料金について</a></li>
+                    <li><a href="index.html#home" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out"><span class="footer-link-icon">🏠</span>トップページへ戻る</a></li>
                 </ul>
             </nav>
         </div>
