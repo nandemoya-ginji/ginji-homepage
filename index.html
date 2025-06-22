@@ -34,9 +34,9 @@
 
         /* QRコード画像のレスポンシブ調整 */
         .qr-code-image {
-            width: 250px; /* PC表示時の固定幅 */
+            width: 200px; /* PC表示時の固定幅 */
             height: auto;
-            max-width: 90%; /* スマホ表示時に90%以下に縮小 */
+            max-width: 80%; /* スマホ表示時に80%以下に縮小 */
             display: block; /* 中央揃えのためにブロック要素に */
             margin: 0 auto; /* 中央揃え */
         }
@@ -56,7 +56,7 @@
                 <a href="#greeting" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ごあいさつ</a>
                 <a href="philosophy.html" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">理念</a>
                 <a href="#services" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">サービス内容</a>
-                <a href="#pricing" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">料金案内</a>
+                <a href="#price" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">料金案内</a>
                 <a href="#faq" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">よくある質問</a>
                 <a href="#contact" class="text-base font-medium text-amber-800 hover:text-amber-600 transition duration-300 rounded-lg px-3 py-2">ご依頼・お問い合わせ</a>
             </div>
@@ -71,7 +71,7 @@
             <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a>
             <a href="philosophy.html" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">理念</a>
             <a href="#services" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">サービス内容</a>
-            <a href="#pricing" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
+            <a href="#price" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
             <a href="#faq" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">よくある質問</a>
             <a href="#contact" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ご依頼・お問い合わせ</a>
         </div>
@@ -96,7 +96,6 @@
                     </a>
                 </div>
                 <div class="md:w-1/2 flex justify-center md:justify-end">
-                    <!-- トップバナー円形画像 -->
                     <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/logo-images/ginji-logo-20250616.png?raw=true" alt="なんでも屋銀時ロゴ" class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shadow-2xl border-4 border-white object-contain p-4 bg-white">
                 </div>
             </div>
@@ -104,7 +103,6 @@
 
         <div class="section-divider"></div>
 
-        <!-- ごあいさつセクション -->
         <section id="greeting" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
             <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 text-center md:text-left">
@@ -127,7 +125,6 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <!-- 温かい握手のイラストプレースホルダー -->
                     <a href="philosophy.html">
                         <img src="https://placehold.co/450x300/fef3c7/78350f?text=理念詳細ページへ" alt="信頼関係のイラスト" class="w-full md:w-3/4 lg:w-2/3 rounded-xl shadow-lg cursor-pointer">
                     </a>
@@ -137,87 +134,8 @@
 
         <div class="section-divider"></div>
 
-        <!-- サービス内容セクション -->
-        <section id="services" class="py-16 md:py-24 bg-emerald-50 rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="container mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
-                    主なサービス内容
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- サービスカード1: お悩み相談・愚痴聞き -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
-                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_24_59.png?raw=true" alt="お悩み相談・愚痴聞きアイコン" class="w-20 h-20 object-contain">
-                        </div>
-                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">お悩み相談・愚痴聞き</h3>
-                        <p class="text-amber-800">
-                            心の内を誰にも言えずに抱え込んでしまう方へ。<br>
-                            オンラインまたは対面で、じっくりお話を伺います。
-                        </p>
-                    </div>
-                    <!-- サービスカード2: 外出・通院などの付き添い -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
-                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/abb6ebe2-99e5-4771-8b4d-313c98c38d13.png?raw=true" alt="外出・通院などの付き添いアイコン" class="w-20 h-20 object-contain">
-                        </div>
-                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">外出・通院などの付き添い</h3>
-                        <p class="text-amber-800">
-                            一人では不安な通院や役所手続き、買い物などの外出に付き添います。
-                        </p>
-                    </div>
-                    <!-- サービスカード3: お話相手 -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
-                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_25_43.png?raw=true" alt="お話相手アイコン" class="w-20 h-20 object-contain">
-                        </div>
-                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">お話相手</h3>
-                        <p class="text-amber-800">
-                            話し相手がほしい、ただ誰かと雑談したいという方にも対応可能です。<br>
-                            高齢者の方からお子様まで、どなたでもご利用いただけます。
-                        </p>
-                    </div>
-                    <!-- サービスカード4: 生活のちょっとしたお手伝い -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
-                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_23_36.png?raw=true" alt="生活のちょっとしたお手伝いアイコン" class="w-20 h-20 object-contain">
-                        </div>
-                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">生活のちょっとしたお手伝い</h3>
-                        <p class="text-amber-800">
-                            室内の片付け、荷物移動、スマホ操作のサポートなど、<br>
-                            手が足りないときに軽作業をご一緒します。
-                        </p>
-                    </div>
-                    <!-- サービスカード5: その他ご相談に応じて柔軟に対応 -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
-                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_22_39.png?raw=true" alt="その他相談アイコン" class="w-20 h-20 object-contain">
-                        </div>
-                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">その他ご相談に応じて柔軟に対応</h3>
-                        <p class="text-amber-800">
-                            内容を問わず、まずはご相談ください。<br>
-                            お引き受けできる範囲で誠実に対応いたします。
-                        </p>
-                    </div>
-                    <!-- サービスカード6: 24時間いつでも予約 -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
-                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_28_59.png?raw=true" alt="24時間予約アイコン" class="w-20 h-20 object-contain">
-                        </div>
-                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">24時間いつでも予約</h3>
-                        <p class="text-amber-800 mb-2">
-                            オンライン通話に限り、24時間いつでもご予約・ご利用いただけます。<br>
-                            夜22時〜朝6時のご利用は、深夜料金（＋1,000円）を頂戴します。<br>
-                            当日予約は、開始2時間前まで受付可能です。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- 料金案内セクション -->
-        <section id="pricing" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+        <!-- 料金案内セクション (以前のデザインに復元) -->
+        <section id="price" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
             <div class="container mx-auto text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
                     料金案内
@@ -227,7 +145,7 @@
                     <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
                         <h3 class="text-3xl font-bold text-amber-700 mb-4">基本料金</h3>
                         <p class="text-4xl font-extrabold text-amber-900 mb-6">
-                            ¥3,000<span class="text-lg font-medium text-amber-700"> / 60分（税込）</span>
+                            ¥3,000<span class="text-lg font-medium text-amber-700"> / 60分 (税込)</span>
                         </p>
                         <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
                             <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 最初の60分</li>
@@ -235,19 +153,19 @@
                             <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 延長料金は別途</li>
                         </ul>
                         <p class="text-amber-800 text-base mt-auto">
-                            ※交通費・実費（施設利用料など）は別途頂戴いたします。
+                            ※交通費、実費（施設利用料など）は別途頂戴いたします。
                         </p>
                     </div>
                     <!-- プランカード2 -->
                     <div class="bg-amber-50 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-amber-100">
                         <h3 class="text-3xl font-bold text-amber-700 mb-4">延長料金</h3>
                         <p class="text-4xl font-extrabold text-amber-900 mb-6">
-                            ¥1,500<span class="text-lg font-medium text-amber-700"> / 30分（税込）</span>
+                            ¥1,500<span class="text-lg font-medium text-amber-700"> / 30分 (税込)</span>
                         </p>
                         <ul class="text-amber-800 text-lg text-left space-y-3 mb-8">
                             <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 60分以降の延長</li>
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 15分単位で調整可能</li>
-                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 事前にお見積もりいたします</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 15分単位での調整可能</li>
+                            <li class="flex items-center"><span class="text-amber-600 mr-2">&#10003;</span> 事前にお見積り</li>
                         </ul>
                         <p class="text-amber-800 text-base mt-auto">
                             ※詳細はお問い合わせください。
@@ -262,14 +180,84 @@
 
         <div class="section-divider"></div>
 
-        <!-- FAQセクション -->
+        <section id="services" class="py-16 md:py-24 bg-emerald-50 rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    主なサービス内容
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_24_59.png?raw=true" alt="お悩み相談・愚痴聞きアイコン" class="w-20 h-20 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">お悩み相談・愚痴聞き</h3>
+                        <p class="text-amber-800">
+                            心の内を誰にも言えずに抱え込んでしまう方へ。<br>
+                            オンラインまたは対面で、じっくりお話を伺います。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/abb6ebe2-99e5-4771-8b4d-313c98c38d13.png?raw=true" alt="外出・通院などの付き添いアイコン" class="w-20 h-20 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">外出・通院などの付き添い</h3>
+                        <p class="text-amber-800">
+                            一人では不安な通院や役所手続き、買い物などの外出に付き添います。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_25_43.png?raw=true" alt="お話相手アイコン" class="w-20 h-20 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">お話相手</h3>
+                        <p class="text-amber-800">
+                            話し相手がほしい、ただ誰かと雑談したいという方にも対応可能です。<br>
+                            高齢者の方からお子様まで、どなたでもご利用いただけます。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_23_36.png?raw=true" alt="生活のちょっとしたお手伝いアイコン" class="w-20 h-20 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">生活のちょっとしたお手伝い</h3>
+                        <p class="text-amber-800">
+                            室内の片付け、荷物移動、スマホ操作のサポートなど、<br>
+                            手が足りないときに軽作業をご一緒します。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_22_39.png?raw=true" alt="その他相談アイコン" class="w-20 h-20 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">その他ご相談に応じて柔軟に対応</h3>
+                        <p class="text-amber-800">
+                            内容を問わず、まずはご相談ください。<br>
+                            お引き受けできる範囲で誠実に対応いたします。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
+                        <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
+                            <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/%E4%B8%BB%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%86%85%E5%AE%B9%E3%82%A4%E3%82%B3%E3%83%B3/ChatGPT%20Image%202025%E5%B9%B46%E6%9C%8816%E6%97%A5%2012_28_59.png?raw=true" alt="24時間予約アイコン" class="w-20 h-20 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">24時間いつでも予約</h3>
+                        <p class="text-amber-800 mb-2">
+                            オンライン通話に限り、24時間いつでもご予約・ご利用いただけます。<br>
+                            夜22時〜朝6時のご利用は、深夜料金（＋1,000円）を頂戴します。<br>
+                            当日予約は、開始2時間前まで受付可能です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
         <section id="faq" class="py-16 md:py-24 bg-emerald-50 rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
             <div class="container mx-auto text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
                     よくある質問 (FAQ)
                 </h2>
                 <div class="space-y-6 max-w-3xl mx-auto">
-                    <!-- FAQアイテム1 -->
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq1')">
                             <span class="flex items-center">
@@ -286,7 +274,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- FAQアイテム2 -->
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq2')">
                             <span class="flex items-center">
@@ -302,7 +289,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- FAQアイテム3 -->
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq3')">
                             <span class="flex items-center">
@@ -326,15 +312,25 @@
 
         <div class="section-divider"></div>
 
-        <!-- LINE QRコードセクションを追加 -->
-        <section class="line-contact text-center py-5">
-            <h3 class="text-xl sm:text-2xl font-bold text-amber-800 mb-4">ご依頼・ご相談はLINEでも受け付けています</h3>
-            <p class="text-base text-amber-800 mb-5">
-                スマートフォンでQRコードを読み取っていただくか、<br>
-                LINEアプリから「@○○○○」で検索してください。
-            </p>
-            <div class="my-5"> <!-- 画像の上下余白 -->
-                <img src="path/to/line_qr.png" alt="LINEの友だち追加QRコード" class="qr-code-image">
+        <!-- LINE QRコードセクション -->
+        <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
+            <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                
+                <!-- LINE追加ボタン -->
+                <div>
+                    <a href="https://lin.ee/wWV6nzA" target="_blank" rel="noopener">
+                        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINEで友だち追加" height="50" style="border:0;">
+                    </a>
+                    <p class="text-sm mt-2.5">ボタンを押すとLINEアプリが開きます</p>
+                </div>
+
+                <!-- QRコード -->
+                <div>
+                    <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/L_gainfriends_2dbarcodes_GW.png?raw=true" alt="LINE友だち追加QRコード" class="qr-code-image">
+                    <p class="text-sm mt-2.5">PCの方はスマホでQRコードを読み取ってください</p>
+                </div>
+
             </div>
         </section>
 
@@ -353,8 +349,7 @@
                 <div class="max-w-2xl mx-auto bg-amber-50 p-8 rounded-xl shadow-lg border border-amber-100">
                     <form id="contactForm" class="space-y-6 text-left">
                         <div id="validationErrors" class="text-red-600 text-sm mb-4 hidden">
-                            <!-- バリデーションエラーメッセージがここに表示されます -->
-                        </div>
+                            </div>
                         <div>
                             <label for="name" class="block text-amber-800 text-lg font-medium mb-2">お名前（ニックネーム可） <span class="text-red-500">*</span></label>
                             <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：山田 太郎 または ニックネーム">
@@ -395,7 +390,6 @@
 
     </main>
 
-    <!-- モーダルとオーバーレイ -->
     <div id="successModalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden modal-overlay"></div>
     <div id="successModal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-xl shadow-2xl z-[100] hidden max-w-md w-11/12 text-center border border-amber-100">
         <h3 class="text-2xl font-bold text-amber-800 mb-4">お問い合わせありがとうございます！</h3>
@@ -406,23 +400,19 @@
         <button id="closeModal" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300">閉じる</button>
     </div>
 
-    <!-- フッター -->
     <footer class="bg-amber-800 text-amber-100 py-10 rounded-t-3xl shadow-inner">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-6">
-                <!-- X (旧Twitter) -->
                 <a href="https://twitter.com/ginji_nandemoya" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:text-white transition duration-300 transform hover:scale-110">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.21 -6.874L4.99 21.75H1.68l7.73-8.825L1.254 2.25H8.08l4.714 6.208L18.244 2.25zm-2.91 17.292h1.18L7.096 3.75H5.81l9.538 15.792z"></path>
                     </svg>
                 </a>
-                <!-- YouTube -->
                 <a href="https://www.youtube.com/@ginji_nandemoya" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:text-white transition duration-300 transform hover:scale-110">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816-.029 6.185.42 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816.029-6.185-.42-8.549-4.385-8.816zm-10.615 9.016v-3.6l4 1.8-4 1.8z"></path>
                     </svg>
                 </a>
-                <!-- LINE -->
                 <a href="https://line.me/ti/p/@ginji_nandemoya" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:text-white transition duration-300 transform hover:scale-110">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.327 7.03c-.22.02-.4-.052-.515-.176l-3.344-3.344a.514.514 0 00-.726 0L7.872 8.854c-.113.124-.294.197-.514.177-.354-.03-.615-.333-.615-.68v-.004c0-.285.14-.54.39-.684l4.316-4.316c.39-.39.866-.606 1.342-.606h.001c.476 0 .952.216 1.342.606l4.316 4.316c.25.144.39.399.39.684v.004c0 .347-.261.65-.615.68zM8.887 14.153c-.02-.22-.052-.4-.176-.515l-3.344-3.344a.514.514 0 000-.726l3.344-3.344c.124-.113.197-.294.177-.514-.03-.354-.333-.615-.68-.615h-.004c-.285 0-.54.14-.684.39L3.58 10.358c-.39.39-.606.866-.606 1.342v.001c0 .476.216.952.606 1.342l4.316 4.316c.144.25.399.39.684.39h.004c.347 0 .65-.261.68-.615zM14.153 8.887c-.22-.02-.4-.052-.515-.176l-3.344-3.344a.514.514 0 00-.726 0L8.854 7.872c-.113.124-.294.197-.514.177-.354-.03-.615-.333-.615-.68v-.004c0-.285.14-.54.39-.684l4.316-4.316c.39-.39.866-.606 1.342-.606h.001c.476 0 .952.216 1.342.606l4.316 4.316c.25.144.39.399.39.684v.004c0 .347-.261.65-.615.68zM15.702 15.702a.857.857 0 110-1.714.857.857 0 010 1.714z"></path>
@@ -432,51 +422,7 @@
             <p class="text-lg mb-2">© 2025 なんでも屋銀時. All rights reserved.</p>
             <p class="text-sm text-amber-200">最終更新日: 2025年6月16日</p>
         </div>
-    
-<section id="price" style="background-color: #f7f7f7; padding: 40px 20px;">
-  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 24px; margin-bottom: 20px;">料金について</h2>
-    <p style="font-size: 16px; margin-bottom: 40px;">
-      ご依頼の内容に応じて、できるかぎり柔軟に対応いたします。目安として、以下のような料金でお受けしています。
-    </p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
-        <h3 style="font-size: 18px; margin-bottom: 10px;">対面でのお手伝い</h3>
-        <p style="font-size: 16px;">60分 3,000円〜</p>
-      </div>
-      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
-        <h3 style="font-size: 18px; margin-bottom: 10px;">オンライン相談</h3>
-        <p style="font-size: 16px;">60分 2,000円〜</p>
-      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
-        <h3 style="font-size: 18px; margin-bottom: 10px;">オンライン限定プラン</h3>
-        <p style="font-size: 16px;">30分 1,200円〜</p>
-      </div>
-
-        <p style="font-size: 16px;">60分 2,000円〜</p>
-      
-      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 280px;">
-        <h3 style="font-size: 18px; margin-bottom: 10px;">オンライン限定プラン</h3>
-        <p style="font-size: 16px;">60分 3,000円</p>
-        <p style="font-size: 14px; color: #555; margin-top: 10px;">
-          通話は基本的にLINE通話またはZOOMで行います。<br>
-          その他の料金は一切かかりませんが、22時〜翌朝6時のご依頼には深夜料金が追加されることがあります。
-        </p>
-      </div>
-
-    </div>
-    
-    <p style="font-size: 14px; margin-top: 20px; color: #444;">
-      ご希望の連絡手段（LINEまたはZOOM）が使用できない場合は、事前にご相談ください。<br>
-      深夜料金の目安や適用条件についても、お問い合わせ時にご案内いたします。
-    </p>
-
-    <p style="font-size: 14px; margin-top: 40px; color: #666;">
-      ※ご依頼内容によってはお引き受けできないこともあります。まずはお気軽にご相談ください。
-    </p>
-  </div>
-</section>
-
-</footer>
+    </footer>
 
     <script>
         // モバイルメニューのトグル機能
