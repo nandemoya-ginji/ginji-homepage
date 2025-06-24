@@ -64,7 +64,8 @@
             max-width: 600px; /* タイムラインの最大幅を制限 */
             margin: 0 auto; /* 中央揃え */
             padding: 1em; /* 内側の余白 */
-            min-height: 500px; /* タイムラインが適切に表示されるよう最低限の高さを設定 */
+            /* min-heightは、Twitterタイムラインが表示されないため、コメントアウトまたは削除します */
+            /* min-height: 500px; */
         }
     </style>
 </head>
@@ -351,9 +352,16 @@
                     X（旧Twitter）最新情報
                 </h2>
                 <div class="twitter-timeline-container bg-amber-50 rounded-xl shadow-inner p-4 border border-amber-100">
-                    <!-- Twitterのタイムライン埋め込みコード -->
-                    <a class="twitter-timeline" href="https://twitter.com/ginji_min2?ref_src=twsrc%5Etfw">Tweets by ginji_min2</a>
-                    <!-- scriptタグのasyncをdeferに変更 -->
+                    <div class="text-center space-y-6">
+                        <p class="text-lg text-amber-800">
+                            ご依頼・ご相談は、X（旧Twitter）のDMからも受け付けています。<br>
+                            フォローしてから、気軽にメッセージをお送りください。
+                        </p>
+                        <a href="https://twitter.com/ginji_min2" target="_blank" rel="noopener"
+                           class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
+                            Xで銀時をフォロー＆DMする
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -410,8 +418,6 @@
         </div>
     </footer>
 
-    <!-- Twitterウィジェットスクリプトを</body>タグの直前に移動し、asyncをdeferに変更 -->
-    <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script>
         // モバイルメニューのトグル機能
         const mobileMenuButton = document.getElementById('mobile-menu-button');
