@@ -340,10 +340,7 @@
         <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
             <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
             <div class="line-description">
-                <p>スマートフォンの方は、下の「友だち追加」ボタンをタップすると、LINEアプリが開きます。</p>
-                <p>PCをご利用の方は、画面に表示されたQRコードをスクリーンショットしてLINEアプリで読み込むか、<br>
-                カメラアプリでQRコードを読み取ってください。</p>
-                <p>お気軽にメッセージをお送りいただけます。</p>
+                <p>友だち追加ボタンをタップすると、LINEアプリが開きます。お気軽にメッセージをお待ちしております。</p>
             </div>
             <div class="my-5"> 
                 <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/L_gainfriends_2dbarcodes_GW.png?raw=true" alt="LINEの友だち追加QRコード" class="qr-code-image">
@@ -365,40 +362,15 @@
                     誠実にお話を伺い、お力になれるよう努めます。
                 </p>
                 <div class="max-w-2xl mx-auto bg-amber-50 p-8 rounded-xl shadow-lg border border-amber-100">
-                    <form id="contactForm" class="space-y-6 text-left">
-                        <div id="validationErrors" class="text-red-600 text-sm mb-4 hidden">
-                            </div>
-                        <div>
-                            <label for="name" class="block text-amber-800 text-lg font-medium mb-2">お名前（ニックネーム可） <span class="text-red-500">*</span></label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：山田 太郎 または ニックネーム">
-                        </div>
-                        <div>
-                            <label for="age" class="block text-amber-800 text-lg font-medium mb-2">年齢 <span class="text-red-500">*</span></label>
-                            <input type="number" id="age" name="age" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：30" min="1">
-                        </div>
-                        <div>
-                            <label for="address" class="block text-amber-800 text-lg font-medium mb-2">お住まいの地域 <span class="text-red-500">*</span></label>
-                            <input type="text" id="address" name="address" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：東京都練馬区 または 〇〇県">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-amber-800 text-lg font-medium mb-2">メールアドレス <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="例：example@mail.com">
-                        </div>
-                        <div>
-                            <label for="inquiryContent" class="block text-amber-800 text-lg font-medium mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
-                            <textarea id="inquiryContent" name="inquiryContent" rows="5" required class="w-full px-4 py-3 rounded-lg border-2 border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-amber-900 bg-white" placeholder="具体的なご相談内容をご記入ください。"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" id="submitButton" class="inline-block bg-amber-400 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 ease-in-out text-lg cursor-not-allowed" disabled>
-                                送信する
-                            </button>
-                        </div>
-                    </form>
-                    <p class="text-amber-700 text-sm mt-8">
-                        ※ご返信まで2営業日ほどお時間をいただく場合がございます。<br>
-                        ※営業エリアは東京23区（特に練馬区・杉並区・中野区）中心です。<br>
-                        　ご相談次第で他地域も対応可能ですので、まずはお気軽にご連絡ください。
-                    </p>
+                    <!-- Googleフォームの埋め込みコード -->
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfc6aYvBxUbCD0Q8jcXUW32hKYbXddaTMzfHQUzJ1eZlPFQ4A/viewform?embedded=true"
+                            width="100%"
+                            height="1012"
+                            frameborder="0"
+                            marginheight="0"
+                            marginwidth="0"
+                            class="min-h-[600px] sm:min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] rounded-lg shadow-md"
+                            >読み込んでいます…</iframe>
                 </div>
                 <p class="text-lg text-amber-800 mt-12 max-w-3xl mx-auto">
                     営業エリアは東京23区（特に練馬区・杉並区・中野区）を中心に、ご相談次第で他地域も対応可能です。
@@ -407,16 +379,6 @@
         </section>
 
     </main>
-
-    <div id="successModalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden modal-overlay"></div>
-    <div id="successModal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-xl shadow-2xl z-[100] hidden max-w-md w-11/12 text-center border border-amber-100">
-        <h3 class="text-2xl font-bold text-amber-800 mb-4">お問い合わせありがとうございます！</h3>
-        <p class="text-amber-700 mb-6">
-            内容を拝見し、改めてご連絡させていただきます。<br>
-            ご返信まで2営業日ほどいただく場合がございますので、何卒ご了承ください。
-        </p>
-        <button id="closeModal" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300">閉じる</button>
-    </div>
 
     <footer class="bg-amber-800 text-amber-100 py-10 rounded-t-3xl shadow-inner">
         <div class="container mx-auto px-4 text-center">
@@ -453,112 +415,6 @@
                 arrow.classList.remove('rotate-180');
             }
         }
-
-        // お問い合わせフォームの送信とモーダル表示、およびバリデーション
-        const contactForm = document.getElementById('contactForm');
-        const submitButton = document.getElementById('submitButton');
-        const validationErrors = document.getElementById('validationErrors');
-        const successModal = document.getElementById('successModal');
-        const successModalOverlay = document.getElementById('successModalOverlay');
-        const closeModalButton = document.getElementById('closeModal');
-
-        // 必須入力項目を定義
-        const requiredFields = [
-            { id: 'name', name: 'お名前（ニックネーム可）' },
-            { id: 'age', name: '年齢' },
-            { id: 'address', name: 'お住まいの地域' },
-            { id: 'email', name: 'メールアドレス' },
-            { id: 'inquiryContent', name: 'お問い合わせ内容' }
-        ];
-
-        // フォームの入力状態をチェックし、送信ボタンの有効/無効を切り替える関数
-        function checkFormValidity() {
-            let allFieldsFilled = true;
-            requiredFields.forEach(field => {
-                const inputElement = document.getElementById(field.id);
-                // trim()で空白を除去し、値が存在するかチェック
-                if (!inputElement.value.trim()) {
-                    allFieldsFilled = false;
-                }
-            });
-
-            if (allFieldsFilled) {
-                submitButton.removeAttribute('disabled');
-                submitButton.classList.remove('bg-amber-400', 'cursor-not-allowed');
-                submitButton.classList.add('bg-amber-600', 'hover:bg-amber-700');
-            } else {
-                submitButton.setAttribute('disabled', 'true');
-                submitButton.classList.add('bg-amber-400', 'cursor-not-allowed');
-                submitButton.classList.remove('bg-amber-600', 'hover:bg-amber-700');
-            }
-        }
-
-        // フォームの入力イベントリスナー
-        contactForm.querySelectorAll('input, textarea').forEach(input => {
-            input.addEventListener('input', checkFormValidity);
-        });
-
-        // 初期ロード時にフォームの有効性をチェック
-        checkFormValidity();
-
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // フォームのデフォルト送信を防止
-
-            let missingFields = [];
-            requiredFields.forEach(field => {
-                const inputElement = document.getElementById(field.id);
-                if (!inputElement.value.trim()) {
-                    missingFields.push(field.name);
-                }
-            });
-
-            if (missingFields.length > 0) {
-                // 未入力項目がある場合、エラーメッセージを表示
-                validationErrors.classList.remove('hidden');
-                validationErrors.innerHTML = `<p class="font-bold mb-2">以下の必須項目が未入力です：</p><ul>` +
-                                             missingFields.map(field => `<li>・${field}</li>`).join('') +
-                                             `</ul>`;
-                // エラーメッセージの表示後、フォームの先頭にスクロールしてユーザーに気づかせる
-                validationErrors.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } else {
-                // すべての必須項目が入力されている場合
-                validationErrors.classList.add('hidden'); // エラーメッセージを非表示にする
-
-                // フォームデータを取得し、mailtoリンクを生成
-                const formData = new FormData(contactForm);
-                let emailBody = "";
-                for (let [key, value] of formData.entries()) {
-                    emailBody += `${key}: ${value}\n`;
-                }
-
-                const emailAddress = "nandemoyaginji@gmail.com";
-                const subject = "ホームページからのお問い合わせ";
-                const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-
-                // mailtoリンクを開く
-                window.location.href = mailtoLink;
-
-                // モーダルを表示
-                successModalOverlay.classList.remove('hidden');
-                successModal.classList.remove('hidden');
-
-                // フォームをリセット
-                contactForm.reset();
-                // フォームリセット後、ボタンの状態を再チェック
-                checkFormValidity();
-            }
-        });
-
-        // モーダルを閉じる
-        closeModalButton.addEventListener('click', () => {
-            successModalOverlay.classList.add('hidden');
-            successModal.classList.add('hidden');
-        });
-
-        successModalOverlay.addEventListener('click', () => {
-            successModalOverlay.classList.add('hidden');
-            successModal.classList.add('hidden');
-        });
     </script>
 </body>
 </html>
