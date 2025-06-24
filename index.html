@@ -353,7 +353,7 @@
                 <div class="twitter-timeline-container bg-amber-50 rounded-xl shadow-inner p-4 border border-amber-100">
                     <!-- Twitterのタイムライン埋め込みコード -->
                     <a class="twitter-timeline" href="https://twitter.com/ginji_min2?ref_src=twsrc%5Etfw">Tweets by ginji_min2</a>
-                    <!-- scriptタグはbodyの終了タグの直前に移動します -->
+                    <!-- scriptタグのasyncをdeferに変更 -->
                 </div>
             </div>
         </section>
@@ -410,8 +410,8 @@
         </div>
     </footer>
 
-    <!-- Twitterウィジェットスクリプトを</body>タグの直前に移動 -->
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- Twitterウィジェットスクリプトを</body>タグの直前に移動し、asyncをdeferに変更 -->
+    <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script>
         // モバイルメニューのトグル機能
         const mobileMenuButton = document.getElementById('mobile-menu-button');
