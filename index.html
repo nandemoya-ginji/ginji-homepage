@@ -47,11 +47,11 @@
             margin: 0 auto;
             font-size: 16px;
             line-height: 1.8;
-            text-align: left; /* テキストアラインメントを左に設定 */
+            text-align: center; /* テキストアラインメントを中央に設定 */
             padding: 1em;
         }
         .line-description p {
-            margin-bottom: 1em;
+            margin-bottom: 1em; /* 段落ごとの余白 */
         }
         /* 必要に応じてスマホ向けのフォントサイズ調整 */
         @media (max-width: 639px) {
@@ -339,7 +339,7 @@
 
         <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
             <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
-            <div class="line-description mx-auto text-center"> <!-- 中央寄せのためmx-autoを追加 -->
+            <div class="line-description">
                 <p>スマートフォンの方は、下の「友だち追加」ボタンをタップすると、LINEアプリが開きます。</p>
                 <p>PCをご利用の方は、画面に表示されたQRコードをスクリーンショットしてLINEアプリで読み込むか、<br>
                 カメラアプリでQRコードを読み取ってください。</p>
@@ -420,7 +420,6 @@
 
     <footer class="bg-amber-800 text-amber-100 py-10 rounded-t-3xl shadow-inner">
         <div class="container mx-auto px-4 text-center">
-            <!-- 以前のSNSアイコンリンクのdiv要素を削除 -->
             <p class="text-lg mb-2">© 2025 なんでも屋銀時. All rights reserved.</p>
             <p class="text-sm text-amber-200">最終更新日: 2025年6月16日</p>
         </div>
