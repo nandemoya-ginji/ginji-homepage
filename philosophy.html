@@ -15,30 +15,39 @@
             -moz-osx-font-smoothing: grayscale;
             background-color: #FAF9F5; /* 全体背景色 */
             color: #333; /* 文字色 */
-            line-height: 1.8em; /* 行間を広めに */
+            line-height: 1.8; /* 行間を広めに (Tailwindのデフォルトline-heightsに合わせるためemを削除) */
             font-size: 16px; /* 本文の基準フォントサイズ */
         }
-        /* 全体コンテナの幅制限と中央寄せ */
-        .container-responsive {
-            max-width: 720px; /* 横幅を720pxに制限 */
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 15px; /* スマホ時の左右余白 */
-            padding-right: 15px; /* スマホ時の左右余白 */
+
+        /* 本文全体を囲うクラスのスタイル */
+        .main-text {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.05rem; /* 16px * 1.05 = 16.8px */
+            color: #333;
+            padding: 1.5em; /* 上下左右1.5emの余白 */
         }
-        @media (min-width: 768px) { /* md (768px) 以上でPC向け調整 */
-            .container-responsive {
-                padding-left: 2rem; /* PC時の余白 */
-                padding-right: 2rem; /* PC時の余白 */
+        /* スマートフォンでの左右余白調整 */
+        @media (max-width: 768px) {
+            .main-text {
+                padding-left: 1em;
+                padding-right: 1em;
             }
         }
-        /* 各セクションの段落余白 */
-        .section-content p {
-            margin-bottom: 1.2em; /* 段落ごとに上下1.2emの余白 */
+
+        /* 段落 <p> タグの余白 */
+        .main-text p {
+            margin-bottom: 1.5em;
         }
-        .section-content p:last-child {
-            margin-bottom: 0; /* 各セクションの最後の段落の余白を削除 */
+        /* 各セクションの最後の段落の余白を削除 */
+        .main-text section.bg-white p:last-child { /* カード内の最後のpタグの余白調整 */
+            margin-bottom: 0;
         }
+        .main-text section.bg-[#F0EEE9] p:last-child { /* 最後のセクション内のpタグの余白調整 */
+            margin-bottom: 0;
+        }
+
         /* セクション区切り線と余白 */
         .section-divider-thin {
             border-bottom: 1px solid #B0D7EA; /* 薄水色の罫線 */
@@ -46,24 +55,20 @@
             margin-bottom: 3rem; /* セクション間の余白 */
         }
         /* 見出しのスタイル */
-        .section-heading {
-            font-size: 20px; /* 見出しのフォントサイズ */
+        .main-text h2, .main-text h3 {
+            margin-top: 2em;
+            border-bottom: 2px solid #aaa; /* 罫線色を調整 */
+            padding-bottom: 0.4em;
             font-weight: bold;
+            font-size: 20px; /* 見出しのフォントサイズ */
             color: #333; /* 見出し色 */
-            margin-bottom: 1.5em; /* 見出し下の余白 */
-            padding-bottom: 0.5em;
-            border-bottom: 2px solid #C7B8DD; /* アクセントカラーの藤色の下線 */
             display: inline-block; /* 下線を見出しの幅に合わせる */
         }
-        /* スマートフォンでの調整 (Tailwindのブレークポイントsm:640px以下) */
-        @media (max-width: 639px) {
-            body {
-                font-size: 16px; /* スマホの本文フォントサイズ */
-            }
-            .section-heading {
-                font-size: 20px; /* スマホの見出しフォントサイズ */
-            }
+        /* ヘッダーh1直下のpタグのスタイル調整（既存） */
+        header p {
+            margin-bottom: 0;
         }
+
         /* ページ最下部フッターのリンクアイコン */
         .footer-link-icon {
             display: inline-block;
@@ -80,7 +85,7 @@
 </head>
 <body class="leading-relaxed">
 
-    <div class="container-responsive py-8 sm:py-12">
+    <div class="main-text py-8 sm:py-12"> <!-- .main-text クラスを適用 -->
         <!-- ヘッダー -->
         <header class="text-center mb-8">
             <h1 class="text-3xl sm:text-4xl font-bold mb-2">理念 - なんでも屋銀時の想い</h1>
@@ -113,7 +118,7 @@
 
         <div class="section-divider-thin"></div>
 
-        <!-- ② セクション2：なんでも屋を始めた理由 (改行を調整) -->
+        <!-- ② セクション2：なんでも屋を始めた理由 (改行と段落調整) -->
         <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
             <h2 class="section-heading">なんでも屋を始めた理由</h2>
             <p>
