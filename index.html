@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>なんでも屋銀時 公式サイト</title>
-    <!-- Tailwind CSS CDNを読み込み -->
+    <!-- Tailwind CSSを読み込みます -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -58,6 +58,12 @@
             .line-description p {
                 font-size: 17px; /* スマホで少し大きく */
             }
+        }
+        /* Twitterタイムラインの埋め込みコンテナのスタイル */
+        .twitter-timeline-container {
+            max-width: 600px; /* タイムラインの最大幅を制限 */
+            margin: 0 auto; /* 中央揃え */
+            padding: 1em; /* 内側の余白 */
         }
     </style>
 </head>
@@ -337,6 +343,20 @@
 
         <div class="section-divider"></div>
 
+        <!-- X (旧Twitter) タイムラインセクション -->
+        <section id="twitter-timeline" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
+                    X（旧Twitter）最新情報
+                </h2>
+                <div class="twitter-timeline-container bg-amber-50 rounded-xl shadow-inner p-4 border border-amber-100">
+                    <a class="twitter-timeline" href="https://twitter.com/ginji_min2?ref_src=twsrc%5Etfw">Tweets by ginji_min2</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
         <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
             <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
             <div class="line-description">
@@ -380,7 +400,7 @@
 
     </main>
 
-    <footer class="bg-amber-800 text-amber-100 py-10 rounded-t-3xl shadow-inner">
+    <footer class="bg-amber-800 text-amber-100 py-10 rounded-t-3xl shadow-inner mt-12">
         <div class="container mx-auto px-4 text-center">
             <p class="text-lg mb-2">© 2025 なんでも屋銀時. All rights reserved.</p>
             <p class="text-sm text-amber-200">最終更新日: 2025年6月16日</p>
