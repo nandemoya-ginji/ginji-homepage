@@ -13,9 +13,9 @@
             font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-color: #FAF9F5; /* 全体背景色 */
+            background-color: #fdfaf5; /* ページ背景色を#fdfaf5に変更 */
             color: #333; /* 文字色 */
-            line-height: 1.8; /* 行間を広めに (Tailwindのデフォルトline-heightsに合わせるためemを削除) */
+            line-height: 1.8; /* 行間を広めに */
             font-size: 16px; /* 本文の基準フォントサイズ */
         }
 
@@ -24,7 +24,7 @@
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.8;
-            font-size: 1.05rem; /* 16px * 1.05 = 16.8px */
+            font-size: 1.05rem;
             color: #333;
             padding: 1.5em; /* 上下左右1.5emの余白 */
         }
@@ -41,26 +41,17 @@
             margin-bottom: 1.5em;
         }
         /* 各セクションの最後の段落の余白を削除 */
-        .main-text section.bg-white p:last-child { /* カード内の最後のpタグの余白調整 */
+        /* .main-text section.bg-white p:last-child, .main-text section.bg-[#F0EEE9] p:last-child {
             margin-bottom: 0;
-        }
-        .main-text section.bg-[#F0EEE9] p:last-child { /* 最後のセクション内のpタグの余白調整 */
-            margin-bottom: 0;
-        }
+        } */ /* 既存スタイルとの競合を防ぐためコメントアウト。padding調整で対応 */
 
-        /* セクション区切り線と余白 */
-        .section-divider-thin {
-            border-bottom: 1px solid #B0D7EA; /* 薄水色の罫線 */
-            margin-top: 3rem; /* セクション間の余白 */
-            margin-bottom: 3rem; /* セクション間の余白 */
-        }
         /* 見出しのスタイル */
         .main-text h2, .main-text h3 {
             margin-top: 2em;
             border-bottom: 2px solid #aaa; /* 罫線色を調整 */
             padding-bottom: 0.4em;
             font-weight: bold;
-            font-size: 20px; /* 見出しのフォントサイズ */
+            font-size: 1.5em; /* フォントサイズを1.5emに調整 */
             color: #333; /* 見出し色 */
             display: inline-block; /* 下線を見出しの幅に合わせる */
         }
@@ -210,8 +201,6 @@
             <p class="mb-2">© 2025 なんでも屋銀時</p>
             <nav>
                 <ul class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-600">
-                    <li><a href="index.html#contact" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out font-bold text-lg"><span class="footer-link-icon">📄</span>ご依頼方法</a></li>
-                    <li><a href="index.html#pricing" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out font-bold text-lg"><span class="footer-link-icon">💰</span>料金について</a></li>
                     <li><a href="index.html#home" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out font-bold text-lg"><span class="footer-link-icon">🏠</span>トップページへ戻る</a></li>
                 </ul>
             </nav>
