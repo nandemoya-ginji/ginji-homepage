@@ -40,6 +40,25 @@
             display: block; /* 中央揃えのためにブロック要素に */
             margin: 0 auto; /* 中央揃え */
         }
+
+        /* LINE案内セクション内のテキストスタイル */
+        .line-description {
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: left; /* テキストアラインメントを左に設定 */
+            padding: 1em;
+        }
+        .line-description p {
+            margin-bottom: 1em;
+        }
+        /* 必要に応じてスマホ向けのフォントサイズ調整 */
+        @media (max-width: 639px) {
+            .line-description p {
+                font-size: 17px; /* スマホで少し大きく */
+            }
+        }
     </style>
 </head>
 <body class="bg-amber-50 text-amber-900 leading-relaxed">
@@ -232,7 +251,7 @@
                     <!-- サービスカード5: その他ご相談に応じて柔軟に対応 -->
                     <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
                         <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://raw.githubusercontent.com/nandemoya-ginji/ginji-homepage/main/icon_assets_ginji_services/icon_misc_support_pencil_note.png?raw=true" alt="その他相談アイコン" class="w-16 h-auto object-contain">
+                            <img src="https://raw.githubusercontent.com/nandemoya-ginji/ginji-homepage/main/icon_assets_ginji_services/icon_misc_support_pencil_note.png?raw=true" alt="その他相談アイコン" style="width: 64px; height: auto;" class="object-contain">
                         </div>
                         <h3 class="text-2xl font-semibold text-amber-700 mb-4">その他ご相談に応じて柔軟に対応</h3>
                         <p class="text-amber-800">
@@ -243,7 +262,7 @@
                     <!-- サービスカード6: 24時間いつでも予約 -->
                     <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-amber-100">
                         <div class="mx-auto mb-6 w-24 h-24 rounded-full flex items-center justify-center bg-emerald-100 p-4">
-                            <img src="https://raw.githubusercontent.com/nandemoya-ginji/ginji-homepage/main/icon_assets_ginji_services/icon_24h_reservation_clock.png?raw=true" alt="24時間予約アイコン" class="w-16 h-auto object-contain">
+                            <img src="https://raw.githubusercontent.com/nandemoya-ginji/ginji-homepage/main/icon_assets_ginji_services/icon_24h_reservation_clock.png?raw=true" alt="24時間予約アイコン" style="width: 64px; height: auto;" class="object-contain">
                         </div>
                         <h3 class="text-2xl font-semibold text-amber-700 mb-4">24時間いつでも予約</h3>
                         <p class="text-amber-800 mb-2">
@@ -320,10 +339,12 @@
 
         <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
             <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
-            <p class="text-base text-amber-800 mb-5">
-                スマートフォンでQRコードを読み取っていただくか、<br>
-                パソコンでご覧の方は、QRコードをスクリーンショットしてLINEで読み取るか、スマートフォンのカメラアプリでQRコードをかざしてアクセスできます。
-            </p>
+            <div class="line-description mx-auto text-center"> <!-- 中央寄せのためmx-autoを追加 -->
+                <p>スマートフォンの方は、下の「友だち追加」ボタンをタップすると、LINEアプリが開きます。</p>
+                <p>PCをご利用の方は、画面に表示されたQRコードをスクリーンショットしてLINEアプリで読み込むか、<br>
+                カメラアプリでQRコードを読み取ってください。</p>
+                <p>お気軽にメッセージをお送りいただけます。</p>
+            </div>
             <div class="my-5"> 
                 <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/L_gainfriends_2dbarcodes_GW.png?raw=true" alt="LINEの友だち追加QRコード" class="qr-code-image">
             </div>
