@@ -31,6 +31,28 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 99; /* モーダルよりも下に設定 */
         }
+
+        /* 理念ページの本文のスタイル調整 */
+        /* 各理念カード内のpタグをターゲットにし、Tailwindのデフォルトスタイルを上書き */
+        #philosophy-main .bg-white.rounded-2xl p {
+            font-size: 1.1rem !important; /* 全体の文字サイズをやや大きく */
+            line-height: 1.8 !important; /* 行間を広げて読みやすく */
+            letter-spacing: 0.03em; /* 文字間を調整 */
+            margin-bottom: 1.2em; /* 段落間に余白 (この場合、各pタグの終わりに適用) */
+        }
+
+        /* 理念ページ全体のコンテンツコンテナのスタイル調整 */
+        #philosophy-main .container {
+            max-width: 700px; /* PCでの最大幅を制限し、スマホでも見やすいように */
+            padding: 1em; /* コンテナ全体のパディングを追加 */
+        }
+
+        /* スマートフォンでの微調整 (必要に応じて) */
+        @media (max-width: 768px) {
+            #philosophy-main .container {
+                padding: 1em; /* スマホでも十分なパディングを確保 */
+            }
+        }
     </style>
 </head>
 <body class="bg-amber-50 text-amber-900 leading-relaxed">
