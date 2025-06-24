@@ -36,6 +36,9 @@
         .section-content p {
             margin-bottom: 1.2em; /* 段落ごとに上下1.2emの余白 */
         }
+        .section-content p:last-child {
+            margin-bottom: 0; /* 各セクションの最後の段落の余白を削除 */
+        }
         /* セクション区切り線と余白 */
         .section-divider-thin {
             border-bottom: 1px solid #B0D7EA; /* 薄水色の罫線 */
@@ -86,14 +89,14 @@
         </header>
 
         <!-- 導入文（イントロ） -->
-        <section class="section-content mb-8">
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
             <p class="text-base sm:text-lg">
                 こんにちは、「なんでも屋銀時」です。初めてこのページをご覧いただく方へ、私の想いや背景を少しだけお話しさせてください。
             </p>
         </section>
 
         <!-- ① セクション1：はじめに -->
-        <section class="section-content">
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
             <h2 class="section-heading">はじめに</h2>
             <p>
                 2025年7月1日、「なんでも屋銀時」は、ひとりの個人として静かにスタートしました。
@@ -111,7 +114,7 @@
         <div class="section-divider-thin"></div>
 
         <!-- ② セクション2：なんでも屋を始めた理由 (改行を調整) -->
-        <section class="section-content">
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
             <h2 class="section-heading">なんでも屋を始めた理由</h2>
             <p>
                 ここ数年で、私自身の人生観が大きく変わりました。
@@ -171,7 +174,7 @@
         <div class="section-divider-thin"></div>
 
         <!-- ③ セクション3：料金についての考え方 -->
-        <section class="section-content">
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
             <h2 class="section-heading">料金についての考え方</h2>
             <p>
                 料金についても、たくさん考えました。
@@ -189,8 +192,8 @@
         <div class="section-divider-thin"></div>
 
         <!-- ④ セクション4：おわりに -->
-        <section class="bg-[#F0EEE9] py-8 px-4 sm:px-8 rounded-xl shadow-inner my-8 text-center"> <!-- 背景色と余白、中央揃え -->
-            <h2 class="section-heading hidden">おわりに</h2> <!-- 見出しは構造上存在させるが非表示に -->
+        <section class="bg-[#F0EEE9] py-8 px-4 sm:px-8 rounded-xl shadow-inner my-8 text-center">
+            <h2 class="section-heading hidden">おわりに</h2>
             <p class="text-base sm:text-lg mb-0">
                 ここまでお読みいただき、ありがとうございました。<br>
                 必要なときに、ふと誰かの顔を思い出すように、“銀時”のことを思い出していただけたら幸いです。
@@ -202,9 +205,9 @@
             <p class="mb-2">© 2025 なんでも屋銀時</p>
             <nav>
                 <ul class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-600">
-                    <li><a href="index.html#contact" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out"><span class="footer-link-icon">📄</span>ご依頼方法</a></li>
-                    <li><a href="index.html#pricing" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out"><span class="footer-link-icon">💰</span>料金について</a></li>
-                    <li><a href="index.html#home" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out"><span class="footer-link-icon">🏠</span>トップページへ戻る</a></li>
+                    <li><a href="index.html#contact" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out font-bold text-lg"><span class="footer-link-icon">📄</span>ご依頼方法</a></li>
+                    <li><a href="index.html#pricing" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out font-bold text-lg"><span class="footer-link-icon">💰</span>料金について</a></li>
+                    <li><a href="index.html#home" class="hover:underline px-2 py-1 rounded-md hover:bg-blue-100 transition duration-150 ease-in-out font-bold text-lg"><span class="footer-link-icon">🏠</span>トップページへ戻る</a></li>
                 </ul>
             </nav>
         </div>
