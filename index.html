@@ -41,7 +41,7 @@
             margin: 0 auto; /* 中央揃え */
         }
 
-        /* LINE案内セクション内のテキストスタイル */
+        /* LINE案内セクション内のテキストスタイル (残していても影響なし、今後使わないため) */
         .line-description {
             max-width: 500px;
             margin: 0 auto;
@@ -59,13 +59,11 @@
                 font-size: 17px; /* スマホで少し大きく */
             }
         }
-        /* Twitterタイムラインの埋め込みコンテナのスタイル */
+        /* Twitterタイムラインの埋め込みコンテナのスタイル (残していても影響なし、今後使わないため) */
         .twitter-timeline-container {
             max-width: 600px; /* タイムラインの最大幅を制限 */
             margin: 0 auto; /* 中央揃え */
             padding: 1em; /* 内側の余白 */
-            /* min-heightは、Twitterタイムラインが表示されないため、コメントアウトまたは削除します */
-            /* min-height: 500px; */
         }
     </style>
 </head>
@@ -345,43 +343,6 @@
 
         <div class="section-divider"></div>
 
-        <!-- X (旧Twitter) タイムラインセクション -->
-        <section id="twitter-timeline" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="container mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
-                    X（旧Twitter）最新情報
-                </h2>
-                <div class="twitter-timeline-container bg-amber-50 rounded-xl shadow-inner p-4 border border-amber-100">
-                    <div class="text-center space-y-6">
-                        <p class="text-lg text-amber-800">
-                            ご依頼・ご相談は、X（旧Twitter）のDMからも受け付けています。<br>
-                            フォローしてから、気軽にメッセージをお送りください。
-                        </p>
-                        <a href="https://twitter.com/ginji_min2" target="_blank" rel="noopener"
-                           class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
-                            Xで銀時をフォロー＆DMする
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <section class="line-contact bg-[#f4f9ff] py-10 px-5 text-center">
-            <h3 class="text-xl sm:text-2xl font-bold mb-5">LINEでもご依頼・ご相談を受付中</h3>
-            <div class="line-description">
-                <p>友だち追加ボタンをタップすると、LINEアプリが開きます。お気軽にメッセージをお待ちしております。</p>
-            </div>
-            <div class="my-5"> 
-                <img src="https://github.com/nandemoya-ginji/ginji-homepage/blob/main/imagesline/L_gainfriends_2dbarcodes_GW.png?raw=true" alt="LINEの友だち追加QRコード" class="qr-code-image">
-            </div>
-            <a href="https://lin.ee/wWV6nzA" target="_blank" rel="noopener" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg mt-5">
-                LINEで友だち追加
-            </a>
-        </section>
-
-
         <section id="contact" class="py-16 md:py-24 bg-white rounded-3xl shadow-lg mx-4 md:mx-auto max-w-7xl px-6 lg:px-8 mb-12">
             <div class="container mx-auto text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12">
@@ -392,16 +353,26 @@
                     ひとりで抱え込まず、まずはご相談ください。<br>
                     誠実にお話を伺い、お力になれるよう努めます。
                 </p>
-                <div class="max-w-2xl mx-auto bg-amber-50 p-8 rounded-xl shadow-lg border border-amber-100">
-                    <!-- Googleフォームの埋め込みコード -->
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfc6aYvBxUbCD0Q8jcXUW32hKYbXddaTMzfHQUzJ1eZlPFQ4A/viewform?embedded=true"
-                            width="100%"
-                            height="1012"
-                            frameborder="0"
-                            marginheight="0"
-                            marginwidth="0"
-                            class="min-h-[600px] sm:min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] rounded-lg shadow-md"
-                            >読み込んでいます…</iframe>
+                <p class="text-lg text-amber-800 mb-6">
+                    ご依頼・ご相談は、以下のいずれかの方法で受け付けています。<br>
+                    ご都合のよい方法をお選びください。
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                    <a href="https://twitter.com/ginji_min2"
+                       class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow text-lg"
+                       target="_blank" rel="noopener">
+                        XでDM
+                    </a>
+                    <a href="https://lin.ee/wWV6nzA"
+                       class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow text-lg"
+                       target="_blank" rel="noopener">
+                        LINEで相談
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfc6aYvBxUbCD0Q8jcXUW32hKYbXddaTMzfHQUzJ1eZlPFQ4A/viewform"
+                       class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full shadow text-lg"
+                       target="_blank" rel="noopener">
+                        フォームから連絡
+                    </a>
                 </div>
                 <p class="text-lg text-amber-800 mt-12 max-w-3xl mx-auto">
                     営業エリアは東京23区（特に練馬区・杉並区・中野区）を中心に、ご相談次第で他地域も対応可能です。
