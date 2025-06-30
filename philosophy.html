@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>なんでも屋銀時 理念</title>
+    <title>なんでも屋銀時 基本理念</title>
     <!-- Tailwind CSS CDNを読み込み -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -35,15 +35,17 @@
         /* 理念ページの本文のスタイル調整 */
         /* 各理念カード内のpタグをターゲットにし、Tailwindのデフォルトスタイルを上書き */
         #philosophy-main .bg-white.rounded-2xl p {
-            font-size: 1.1rem !important; /* 全体の文字サイズをやや大きく */
-            line-height: 1.8 !important; /* 行間を広げて読みやすく */
+            font-size: 16px !important; /* 全体の文字サイズをやや大きく */
+            line-height: 1.6 !important; /* 行間を広げて読みやすく */
             letter-spacing: 0.03em; /* 文字間を調整 */
-            margin-bottom: 1.2em; /* 段落間に余白 (この場合、各pタグの終わりに適用) */
+            margin-bottom: 1em; /* 段落間に余白 */
+            color: #333333; /* 文字色を設定 */
         }
 
         /* 理念ページ全体のコンテンツコンテナのスタイル調整 */
         #philosophy-main .container {
             max-width: 700px; /* PCでの最大幅を制限し、スマホでも見やすいように */
+            margin: 0 auto; /* 中央揃え */
             padding: 1em; /* コンテナ全体のパディングを追加 */
         }
 
@@ -80,13 +82,13 @@
         </nav>
         <!-- モバイルメニュー -->
         <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-b-xl shadow-lg pb-4">
-            <a href="index.html#home" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ホーム</a>
-            <a href="index.html#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a>
+            <a href="#home" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ホーム</a>
+            <a href="#greeting" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ごあいさつ</a>
             <a href="#philosophy-main" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">理念</a>
-            <a href="index.html#services" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">サービス内容</a>
-            <a href="index.html#price" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
-            <a href="index.html#faq" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">よくある質問</a>
-            <a href="index.html#contact" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ご依頼・お問い合わせ</a>
+            <a href="#services" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">サービス内容</a>
+            <a href="#price" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">料金案内</a>
+            <a href="#faq" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">よくある質問</a>
+            <a href="#contact" class="block px-6 py-3 text-lg font-medium text-amber-800 hover:bg-amber-50 transition duration-300">ご依頼・お問い合わせ</a>
         </div>
     </header>
 
@@ -96,7 +98,7 @@
             <div class="absolute inset-0 bg-pattern opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23fcd34d\' fill-opacity=\'0.2\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
             <div class="container mx-auto max-w-4xl text-center relative z-10">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-amber-900 mb-8">
-                    理念
+                    基本理念
                 </h1>
                 <p class="text-lg md:text-xl text-amber-800 mb-12">
                     こんにちは、「なんでも屋銀時」です。初めてこのページをご覧いただく方へ、私の想いや背景を少しだけお話しさせてください。
