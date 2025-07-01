@@ -66,6 +66,30 @@
             margin: 0 auto; /* 中央揃え */
             padding: 1em; /* 内側の余白 */
         }
+
+        /* FAQ質問部分の共通スタイル */
+        .faq-question {
+            font-size: 1.25rem; /* text-xl相当 */
+            font-weight: 600; /* font-semibold相当 */
+            line-height: 1.5; /* 行間を均一に */
+            margin-bottom: 0.5rem; /* 質問と回答の間の余白 */
+            display: flex;
+            align-items: center;
+        }
+        .faq-question .q-mark {
+            font-size: 1.125rem; /* text-lg相当 */
+            font-weight: 700; /* font-bold相当 */
+            margin-right: 0.75rem; /* mr-3相当 */
+            background-color: #fde68a; /* bg-amber-200相当 */
+            color: #78350f; /* text-amber-800相当 */
+            border-radius: 9999px; /* rounded-full相当 */
+            width: 2rem; /* w-8相当 */
+            height: 2rem; /* h-8相当 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0; /* 縮小させない */
+        }
     </style>
 </head>
 <body class="bg-amber-50 text-amber-900 leading-relaxed">
@@ -300,8 +324,8 @@
                 <div class="space-y-6 max-w-3xl mx-auto">
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq1')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                            <span class="faq-question">
+                                <span class="q-mark">Q</span>
                                 営業エリアはどこまでですか？
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -316,8 +340,8 @@
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq2')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                            <span class="faq-question">
+                                <span class="q-mark">Q</span>
                                 強引な勧誘や営業はありますか？
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -331,8 +355,8 @@
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq3')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                            <span class="faq-question">
+                                <span class="q-mark">Q</span>
                                 「ただ一緒にいるだけ」の依頼も可能ですか？
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -349,8 +373,8 @@
                     <!-- 追加Q&A1 -->
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq4')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                            <span class="faq-question">
+                                <span class="q-mark">Q</span>
                                 支払いはどのように行いますか？
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -365,8 +389,8 @@
                     <!-- 追加Q&A2 -->
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq5')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                            <span class="faq-question">
+                                <span class="q-mark">Q</span>
                                 話した内容や個人情報が他人に知られることはありますか？
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -378,27 +402,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 追加Q&A3 -->
-                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
-                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq6')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
-                                キャンセルはできますか？
-                            </span>
-                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq6" class="hidden mt-4 text-amber-800 text-lg flex">
-                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
-                            <div class="flex-grow text-left">
-                                はい、キャンセルは可能です。現在はキャンセル料はいただいておりませんが、なるべく早めにご連絡をお願いいたします。
-                            </div>
-                        </div>
-                    </div>
                     <!-- 追加Q&A4: オンライン通話について -->
                     <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
                         <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq7')">
-                            <span class="flex items-center">
-                                <span class="bg-amber-200 text-amber-800 rounded-full w-8 h-8 flex items-center justify-center text-lg mr-3 font-bold">Q</span>
+                            <span class="faq-question">
+                                <span class="q-mark">Q</span>
                                 オンライン通話はどのように行いますか？
                             </span>
                             <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -407,6 +415,22 @@
                             <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
                             <div class="flex-grow text-left">
                                 オンライン通話は、基本的にLINEまたはZoomで行っております。LINEをご利用の場合は、事前に友だち追加をお願いしています。ご希望の方法があればお知らせください。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ項目: キャンセルはできますか？ (最下段に移動) -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-amber-100">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-amber-700 text-xl focus:outline-none" onclick="toggleFaq('faq6')">
+                            <span class="faq-question">
+                                <span class="q-mark">Q</span>
+                                キャンセルはできますか？
+                            </span>
+                            <svg class="w-6 h-6 text-amber-600 transform transition-transform duration-300" id="arrow6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="faq6" class="hidden mt-4 text-amber-800 text-lg flex">
+                            <span class="font-bold text-amber-600 mr-2 flex-shrink-0">A.</span>
+                            <div class="flex-grow text-left">
+                                はい、キャンセルは可能です。現在はキャンセル料はいただいておりませんが、なるべく早めにご連絡をお願いいたします。
                             </div>
                         </div>
                     </div>
